@@ -7,12 +7,11 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
-    validates :birthday
+    validates :birth_day
+    validates :gender
   end
 
-  with_option presence: true, foreign_key: true do
-    validates :age_id
-    validates :gender_id
+  with_options presence: true, numericality: { other_than: 0, message: 'select' } do
     validates :prefecture_id
   end
 

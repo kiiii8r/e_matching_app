@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 2020_10_07_032402) do
     t.string "first_name_kana", null: false
     t.string "last_name_kana", null: false
     t.string "email", default: "", null: false
-    t.string "password", default: "", null: false
-    t.bigint "age_id", null: false
-    t.bigint "gender_id", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.integer "age"
+    t.string "gender", null: false
     t.bigint "prefecture_id", null: false
     t.date "birth_day", null: false
     t.string "image"
@@ -30,9 +30,7 @@ ActiveRecord::Schema.define(version: 2020_10_07_032402) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["age_id"], name: "index_users_on_age_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["gender_id"], name: "index_users_on_gender_id"
     t.index ["prefecture_id"], name: "index_users_on_prefecture_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

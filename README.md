@@ -11,11 +11,11 @@
 | first_name_kana  | string     | null: false                    |
 | last_name_kana   | string     | null: false                    |
 | email            | string     | null: false                    |
-| password         | integer    | null: false                    |
-| age_id           | references | null: false, foreign_key: true |
-| gender_id        | references | null: false, foreign_key: true |
-| prefecture_id    | references | null: false, foreign_key: true |
-| birth_day        | date       | null: false,                   |
+| password         | string     | null: false                    |
+| age              | integer    | null: false                    |
+| gender           | string     | null: false                    |
+| prefecture_id    | references | null: false                    |
+| birth_day        | date       | null: false                    |
 | image            | string     |                                |
 
 ### Association

@@ -5,13 +5,7 @@ function calculation_age() {
   const resultAge = document.getElementById("result-age");
   const form = document.getElementById("first_registration");
 
-  birthYear.addEventListener("mouseout", () => {
-    calculation();
-  });
-  birthMonth.addEventListener("mouseout", () => {
-    calculation();
-  });
-  birthDay.addEventListener("mouseout", () => {
+  window.addEventListener("mouseover", () => {
     calculation();
   });
 

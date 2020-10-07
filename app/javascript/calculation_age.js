@@ -3,6 +3,7 @@ function calculation_age() {
   const birthMonth = document.getElementById("user_birth_day_2i");
   const birthDay = document.getElementById("user_birth_day_3i");
   const resultAge = document.getElementById("result-age");
+  const form = document.getElementById("first_registration");
 
   birthYear.addEventListener("mouseout", () => {
     calculation();
@@ -12,6 +13,16 @@ function calculation_age() {
   });
   birthDay.addEventListener("mouseout", () => {
     calculation();
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+  const ageObj = `<input value=${resultAge.innerHTML} type='hidden' name='age'>`;
+  document.body.insertAdjacentHTML("beforeend", ageObj);
+
+  document.getElementById("first_registration").submit();
+  document.getElementById("first_registration").reset();
   });
 
   function calculation(){

@@ -15,7 +15,7 @@
 | age_id           | references | null: false, foreign_key: true |
 | gender_id        | references | null: false, foreign_key: true |
 | prefecture_id    | references | null: false, foreign_key: true |
-| birth_day        | date       | null: false, foreign_key: true |
+| birth_day        | date       | null: false,                   |
 | image            | string     |                                |
 
 ### Association
@@ -28,17 +28,17 @@
 
 ## Profiles テーブル
 
-| Column          | Type       | Options                         |
-| --------------- | ---------- | ------------------------------- |
-| id              | integer    | null: false                     |
-| user_id         | integer    | null: false                     |
-| introduction    | text       | null: false                     |
-| hobby           | text       | null: false                     |
-| target          | text       | null: false                     |
-| language_id     | references | null: false, foreign_key: true  |
-| role_id         | references | null: false, foreign_key: true  |
-| pros            | integer    | null: false                     |
-| defect          | integer    | null: false                     |
+| Column          | Type       | Options              |
+| --------------- | ---------- | -------------------- |
+| id              | integer    |                      |
+| user_id         | integer    |                      |
+| introduction    | text       |                      |
+| hobby           | text       |                      |
+| target          | text       |                      |
+| language_id     | references | foreign_key: true    |
+| role_id         | references | foreign_key: true    |
+| pros            | integer    |                      |
+| defect          | integer    |                      |
 
 ### Association
 

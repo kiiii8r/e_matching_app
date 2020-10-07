@@ -4,4 +4,27 @@ class User < ApplicationRecord
   
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
+
+  with_options presence: true do
+    validates :nickname
+    validates :birthday
+  end
+
+  with_option presence: true, foreign_key: true do
+    validates :age_id
+    validates :gender_id
+    validates :prefecture_id
+  end
+
+  validates :password, format: { with: /\A[a-z0-9]+\z/i, message: 'Include both letters and numbers' }, allow_nil: true
+
+  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'Full-width characters' } do
+    validates :first_name
+    validates :last_name
+  end
+
+  with_options presence: true, format: { with: /\A[ァ-ヶー－]+\z/, message: 'Full-width katakana characters' } do
+    validates :first_name_kana
+    validates :last_name_kana
+  end
 end

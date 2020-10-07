@@ -1,9 +1,6 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to_active_hash :prefecture
 
   with_options presence: true do
     validates :nickname
@@ -12,7 +9,6 @@ class User < ApplicationRecord
   end
 
   with_options presence: true, numericality: { other_than: 0, message: 'select' } do
-    validates :prefecture_id
   end
 
   validates :password, format: { with: /\A[a-z0-9]+\z/i, message: 'Include both letters and numbers' }, allow_nil: true

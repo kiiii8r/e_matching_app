@@ -14,9 +14,7 @@
 | password         | string     | null: false                    |
 | age              | integer    | null: false                    |
 | gender           | string     | null: false                    |
-| prefecture_id    | references | null: false                    |
 | birth_day        | date       | null: false                    |
-| image            | string     |                                |
 
 ### Association
 
@@ -31,12 +29,14 @@
 | Column          | Type       | Options              |
 | --------------- | ---------- | -------------------- |
 | id              | integer    |                      |
+| image           | string     |                      |
 | user_id         | integer    |                      |
+| prefecture_id   | references |                      |
 | introduction    | text       |                      |
 | hobby           | text       |                      |
 | target          | text       |                      |
-| language_id     | references | foreign_key: true    |
-| role_id         | references | foreign_key: true    |
+| language_id     | references |                      |
+| role_id         | references |                      |
 | pros            | integer    |                      |
 | defect          | integer    |                      |
 

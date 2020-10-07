@@ -22,16 +22,13 @@ ActiveRecord::Schema.define(version: 2020_10_07_032402) do
     t.string "encrypted_password", default: "", null: false
     t.integer "age"
     t.string "gender", null: false
-    t.bigint "prefecture_id", null: false
     t.date "birth_day", null: false
-    t.string "image"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["prefecture_id"], name: "index_users_on_prefecture_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

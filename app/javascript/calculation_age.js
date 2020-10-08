@@ -12,7 +12,7 @@ function calculation_age() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-  const ageObj = `<input value=${resultAge.innerHTML} type='hidden' name='age'>`;
+  const ageObj = `<input value=${resultAge.innerHTML} type='hidden' name='user[age]'>`;
   document.body.insertAdjacentHTML("beforeend", ageObj);
 
   document.getElementById("first_registration").submit();

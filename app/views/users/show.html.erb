@@ -1,0 +1,83 @@
+<%= render "shared/header" %>
+
+<div class="user-show">
+  <div class="user-box">
+    <h2 class="name">
+      <%= @user.nickname %>
+    </h2>
+    <div class='user-img-content'>
+      <%# <%= image_tag @profile.image ,class:"user-img" %> %>
+    
+    </div>
+    <div class="user-name-box">
+      <span class="user-name"></span>
+        <%= @user.nickname %>さん
+    </div>
+
+    <% if current_user.id == params[:id] %>
+
+    <%= link_to 'プロフィールの編集', "#", method: :get, class: "user-red-btn" %>
+    <p class='or-text'>or</p>
+
+    <% else %>
+
+    <%= link_to 'メッセージ', "#", class:"user-red-btn"%>
+    
+    <% end %>
+
+    <div class="user-explain-box">
+      <%# <span><%= @product.introduction</span> %> %>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-user">年齢</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">住み</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">主な役割</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">使用言語</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">目標</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">趣味</th>
+          <td class="detail-value"><%= @user %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="option">
+      <div class="favorite-btn">
+        <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%> %>
+        <span>お気に入り 0</span>
+      </div>
+      <div class="report-btn">
+        <%# <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%> %>
+        <span>通報</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="links">
+    <a href="#" class="change-user-btn">
+      ＜ 前の人
+    </a>
+    <a href="#" class="change-user-btn">
+      次の人 ＞
+    </a>
+  </div>
+  <%# <a href="#" class='another-user'><%= @userをもっと見る</a> %> %>
+</div>
+
+<%= render "shared/second-footer" %>

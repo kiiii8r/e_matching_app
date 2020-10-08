@@ -26,19 +26,19 @@
 
 ## Profiles テーブル
 
-| Column          | Type       | Options              |
-| --------------- | ---------- | -------------------- |
-| id              | integer    |                      |
-| image           | string     |                      |
-| user_id         | integer    |                      |
-| prefecture_id   | references |                      |
-| introduction    | text       |                      |
-| hobby           | text       |                      |
-| target          | text       |                      |
-| language_id     | references |                      |
-| role_id         | references |                      |
-| pros            | integer    |                      |
-| defect          | integer    |                      |
+| Column            | Type       | Options              |
+| ----------------- | ---------- | -------------------- |
+| id                | integer    |                      |
+| image             | string     |                      |
+| user_id           | integer    |                      |
+| prefecture_id     | references |                      |
+| introduction      | text       |                      |
+| hobby             | text       |                      |
+| target            | text       |                      |
+| language_id       | references |                      |
+| role_id           | references |                      |
+| pros              | integer    |                      |
+| defect            | integer    |                      |
 
 ### Association
 

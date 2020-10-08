@@ -9,16 +9,6 @@ function calculation_age() {
     calculation();
   });
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-  const ageObj = `<input value=${resultAge.innerHTML} type='hidden' name='user[age]'>`;
-  document.body.insertAdjacentHTML("beforeend", ageObj);
-
-  document.getElementById("first_registration").submit();
-  document.getElementById("first_registration").reset();
-  });
-
   function calculation(){
     if (birthYear.value && birthMonth.value && birthDay.value){
       const birthday = birthYear.value + (0 + birthMonth.value).slice(-2) + (0 + birthDay.value).slice(-2);

@@ -136,5 +136,11 @@ RSpec.describe User, type: :model do
       @user.valid?
       expect(@user.errors.full_messages).to include("Gender can't be blank")
     end
+
+    it '年齢がないと登録できない' do
+      @user.age = nil
+      @user.valid?
+      expect(@user.errors.full_messages).to include("Age can't be blank")
+    end
   end
 end

@@ -6,6 +6,7 @@ class User < ApplicationRecord
     validates :nickname
     validates :birth_day
     validates :gender
+    validates :age
   end
 
   validates :password, format: { with: /\A[a-z0-9]+\z/i, message: 'Include both letters and numbers' }, allow_nil: true

@@ -5,15 +5,16 @@
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | id               | integer    | null: false                    |
-| name             | string     | null: false                    |
+| nickname         | string     | null: false                    |
+| first_name       | string     | null: false                    |
+| last_name        | string     | null: false                    |
+| first_name_kana  | string     | null: false                    |
+| last_name_kana   | string     | null: false                    |
 | email            | string     | null: false                    |
-| password         | integer    | null: false                    |
-| age_id           | references | null: false, foreign_key: true |
-| gender_id        | references | null: false, foreign_key: true |
-| prefecture_id    | references | null: false, foreign_key: true |
-| language_id      | references | null: false, foreign_key: true |
-| role_id          | references | null: false, foreign_key: true |
-| image            | strings    |                                |
+| password         | string     | null: false                    |
+| age              | integer    | null: false                    |
+| gender           | string     | null: false                    |
+| birth_day        | date       | null: false                    |
 
 ### Association
 
@@ -25,17 +26,19 @@
 
 ## Profiles テーブル
 
-| Column          | Type       | Options                         |
-| --------------- | ---------- | ------------------------------- |
-| id              | integer    | null: false                     |
-| user_id         | integer    | null: false                     |
-| introduction    | text       | null: false                     |
-| hobby           | text       | null: false                     |
-| target          | text       | null: false                     |
-| language_id     | references | null: false, foreign_key: true  |
-| role_id         | references | null: false, foreign_key: true  |
-| pros            | integer    | null: false                     |
-| defect          | integer    | null: false                     |
+| Column          | Type       | Options              |
+| --------------- | ---------- | -------------------- |
+| id              | integer    |                      |
+| image           | string     |                      |
+| user_id         | integer    |                      |
+| prefecture_id   | references |                      |
+| introduction    | text       |                      |
+| hobby           | text       |                      |
+| target          | text       |                      |
+| language_id     | references |                      |
+| role_id         | references |                      |
+| pros            | integer    |                      |
+| defect          | integer    |                      |
 
 ### Association
 

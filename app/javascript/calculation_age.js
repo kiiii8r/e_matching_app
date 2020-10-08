@@ -3,7 +3,6 @@ function calculation_age() {
   const birthMonth = document.getElementById("user_birth_day_2i");
   const birthDay = document.getElementById("user_birth_day_3i");
   const resultAge = document.getElementById("result-age");
-  const form = document.getElementById("first_registration");
 
   window.addEventListener("mouseover", () => {
     calculation();

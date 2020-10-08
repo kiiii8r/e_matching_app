@@ -1,4 +1,4 @@
-FactoryBot.defind do
+FactoryBot.define do
   factory :user do
     nickname { Faker::Name.last_name }
     first_name { Gimei.last.kanji }

@@ -26,19 +26,21 @@
 
 ## Profiles テーブル
 
-| Column          | Type       | Options              |
-| --------------- | ---------- | -------------------- |
-| id              | integer    |                      |
-| image           | string     |                      |
-| user_id         | integer    |                      |
-| prefecture_id   | references |                      |
-| introduction    | text       |                      |
-| hobby           | text       |                      |
-| target          | text       |                      |
-| language_id     | references |                      |
-| role_id         | references |                      |
-| pros            | integer    |                      |
-| defect          | integer    |                      |
+| Column            | Type       | Options                                            |
+| ----------------- | ---------- | -------------------------------------------------- |
+| id                | integer    |                                                    |
+| user_id           | integer    | uniqueness: true, foreign_key: true, null: false   |
+| prefecture_id     | references |                                                    |
+| introduction      | text       |                                                    |
+| hobby             | text       |                                                    |
+| target            | text       |                                                    |
+| language1_id      | references |                                                    |
+| language2_id      | references |                                                    |
+| language3_id      | references |                                                    |
+| other_language    | text       |                                                    |
+| role_id           | references |                                                    |
+| pros              | text       |                                                    |
+| defect            | text       |                                                    |
 
 ### Association
 

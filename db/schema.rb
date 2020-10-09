@@ -15,19 +15,19 @@ ActiveRecord::Schema.define(version: 2020_10_09_021058) do
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "nickname"
     t.string "image"
-    t.bigint "prefecture_id_id"
+    t.bigint "prefecture_id"
     t.text "introduction"
     t.text "hobby"
     t.text "target"
-    t.bigint "language_id_id"
-    t.bigint "role_id_id"
+    t.bigint "language_id"
+    t.bigint "role_id"
     t.integer "pros"
     t.integer "defect"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["language_id_id"], name: "index_profiles_on_language_id_id"
-    t.index ["prefecture_id_id"], name: "index_profiles_on_prefecture_id_id"
-    t.index ["role_id_id"], name: "index_profiles_on_role_id_id"
+    t.index ["language_id"], name: "index_profiles_on_language_id"
+    t.index ["prefecture_id"], name: "index_profiles_on_prefecture_id"
+    t.index ["role_id"], name: "index_profiles_on_role_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

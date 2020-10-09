@@ -6,7 +6,7 @@
       <%= @user.nickname %>
     </h2>
     <div class='user-img-content'>
-      <%# <%= image_tag @profile.image ,class:"user-img" %> %>
+      <%# <%= image_tag @profile.image ,class:"user-img" %> 
     
     </div>
     <div class="user-name-box">
@@ -26,33 +26,53 @@
     <% end %>
 
     <div class="user-explain-box">
-      <%# <span><%= @product.introduction</span> %> %>
+      <span><%= @profile.introduction %></span>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-user">年齢</th>
-          <td class="detail-value"><%= @user %></td>
+          <td class="detail-value"><%= @user.age %></td>
         </tr>
         <tr>
           <th class="detail-user">住み</th>
-          <td class="detail-value"><%= @user %></td>
+          <td class="detail-value"><%= @profile.prefecture.name %></td>
         </tr>
         <tr>
           <th class="detail-user">主な役割</th>
-          <td class="detail-value"><%= @user %></td>
+          <td class="detail-value"><%= @profile.role.name %></td>
         </tr>
         <tr>
-          <th class="detail-user">使用言語</th>
-          <td class="detail-value"><%= @user %></td>
+          <th class="detail-user">主な使用言語1</th>
+          <td class="detail-value"><%= @profile.language1.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">主な使用言語2</th>
+          <td class="detail-value"><%= @profile.language2.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">主な使用言語3</th>
+          <td class="detail-value"><%= @profile.language3.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">その他使用言語</th>
+          <td class="detail-value"><%= @profile.other_language %></td>
         </tr>
         <tr>
           <th class="detail-user">目標</th>
-          <td class="detail-value"><%= @user %></td>
+          <td class="detail-value"><%= @profile.target %></td>
         </tr>
         <tr>
           <th class="detail-user">趣味</th>
-          <td class="detail-value"><%= @user %></td>
+          <td class="detail-value"><%= @profile.hobby %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">長所</th>
+          <td class="detail-value"><%= @profile.pros %></td>
+        </tr>
+        <tr>
+          <th class="detail-user">短所</th>
+          <td class="detail-value"><%= @profile.defect %></td>
         </tr>
       </tbody>
     </table>

@@ -14,7 +14,7 @@
         <%= @user.nickname %>さん
     </div>
 
-    <% if current_user.id == params[:id] %>
+    <% if current_user.id == @user[:id] %>
 
     <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), method: :get, class: "user-red-btn" %>
     <p class='or-text'>or</p>

@@ -26,22 +26,22 @@
 
 ## Profiles テーブル
 
-| Column            | Type       | Options              |
-| ----------------- | ---------- | -------------------- |
-| id                | integer    |                      |
-| user_id           | integer    |                      |
-| image             | string     |                      |
-| prefecture_id     | references |                      |
-| introduction      | text       |                      |
-| hobby             | text       |                      |
-| target            | text       |                      |
-| language1_id      | references |                      |
-| language2_id      | references |                      |
-| language3_id      | references |                      |
-| other_language    | text       |                      |
-| role_id           | references |                      |
-| pros              | text       |                      |
-| defect            | text       |                      |
+| Column            | Type       | Options                                            |
+| ----------------- | ---------- | -------------------------------------------------- |
+| id                | integer    |                                                    |
+| user_id           | integer    | uniqueness: true, foreign_key: true, null: false   |
+| image             | string     |                                                    |
+| prefecture_id     | references |                                                    |
+| introduction      | text       |                                                    |
+| hobby             | text       |                                                    |
+| target            | text       |                                                    |
+| language1_id      | references |                                                    |
+| language2_id      | references |                                                    |
+| language3_id      | references |                                                    |
+| other_language    | text       |                                                    |
+| role_id           | references |                                                    |
+| pros              | text       |                                                    |
+| defect            | text       |                                                    |
 
 ### Association
 

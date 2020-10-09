@@ -7,4 +7,6 @@ class Profile < ApplicationRecord
   belongs_to_active_hash :role
 
   has_one :user
+
+  varidates :user_id, presence: true, uniquness:true
 end

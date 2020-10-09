@@ -8,5 +8,5 @@ class Profile < ApplicationRecord
 
   has_one :user
 
-  varidates :user_id, presence: true, uniquness:true
+  validates :user_id, presence: true, uniqueness: true
 end

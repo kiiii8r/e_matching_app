@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource) 
-    new_user_profile_path
+    new_user_profile_path(@user.id)
   end
 
   def configure_permitted_parameters

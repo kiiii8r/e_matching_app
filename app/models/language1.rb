@@ -1,4 +1,4 @@
-class Language1 < ApplicationRecord
+class Language1 <  ActiveHash::Base
   self.data = [
     { id: 0, name: '---' },
     { id: 1, name: 'HTML' },
@@ -12,6 +12,6 @@ class Language1 < ApplicationRecord
     { id: 9, name: 'Swift' },
     { id: 10, name: 'C' },
     { id: 11, name: 'C#' },
-    { id: 12, name: 'C++' },
+    { id: 12, name: 'C++' }
   ]
 end

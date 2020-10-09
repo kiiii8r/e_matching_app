@@ -1,12 +1,12 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:new, :create, :edit, :update]
-  before_action :set_user, only: [:new, :edit]
+  before_action :set_profile, only: [:edit, :update]
 
   def new
     @profile = Profile.new
   end
 
   def create
+    @profile = Profile.new(profile_params)
     if @profile.create(profile_params)
       radirect_to users_path(@profile.user_id)
     else
@@ -27,14 +27,11 @@ class ProfilesController < ApplicationController
 
   private
 
-  
+  def profile_params
+    params.require(:profile).permit(:image, :prefecture_id, :introduction, :hobby, :target, :language1_id, :language2_id, :language3_id, :other_language, :role_id, :pros, :defect).merge(user_id: current_user.id)
+  end
 
   def set_profile
     @profile = Profile.find(params[:id])
   end
-
-  def set_user
-    @user = User.find(params[:id])
-  end
-
 end

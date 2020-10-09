@@ -2,7 +2,7 @@
 
     
     <div class='account-page user-form'>
-      <%= form_with model: @profile,  local: true do |f|%>
+      <%= form_with model: @profile, url: user_profiles_path(params[:user_id]), local: true do |f|%>
 
       <div class="form-group">
         <div class='form-text-wrap'>

@@ -5,8 +5,10 @@
     <ul class='user-lists'>
 
     
-    
       <% @users.each do |user| %>
+
+      <% unless current_user.id == user.id%>
+
       <li class='list'>
         <%= link_to user_path(user.id) do %>
         <div class='user-img-content'>
@@ -46,6 +48,8 @@
         </div>
         <% end %>
       </li>
+
+        <% end %>
       <% end %>
 
 <%= render "shared/contents-footer" %>

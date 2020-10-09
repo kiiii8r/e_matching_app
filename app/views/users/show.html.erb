@@ -6,7 +6,7 @@
       <%= @user.nickname %>
     </h2>
     <div class='user-img-content'>
-      <%# <%= image_tag @profile.image ,class:"user-img" %> 
+      <%= image_tag @profile.image.variant(resize:'500x500'), class:"user-img" if @profile.image.attached? %>
     
     </div>
     <div class="user-name-box">

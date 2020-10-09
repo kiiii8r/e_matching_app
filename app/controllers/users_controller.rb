@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   end
 
   def front
-    if user_signed_in?
-      redirect_to users_path
-    end
+    redirect_to users_path if user_signed_in?
   end
 
   def show

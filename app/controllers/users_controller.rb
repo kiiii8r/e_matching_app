@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = User.all.order('created_at DESC')
+    @users = User.all.order('created_at DESC')
   end
 
   def front

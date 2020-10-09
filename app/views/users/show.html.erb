@@ -16,7 +16,7 @@
 
     <% if current_user.id == params[:id] %>
 
-    <%= link_to 'プロフィールの編集', "#", method: :get, class: "user-red-btn" %>
+    <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), method: :get, class: "user-red-btn" %>
     <p class='or-text'>or</p>
 
     <% else %>

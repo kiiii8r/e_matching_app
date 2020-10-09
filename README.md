@@ -35,7 +35,10 @@
 | introduction      | text       |                      |
 | hobby             | text       |                      |
 | target            | text       |                      |
-| language_id       | references |                      |
+| language1_id      | references |                      |
+| language2_id      | references |                      |
+| language3_id      | references |                      |
+| other_language    | text       |                      |
 | role_id           | references |                      |
 | pros              | integer    |                      |
 | defect            | integer    |                      |

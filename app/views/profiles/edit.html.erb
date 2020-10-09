@@ -1,0 +1,29 @@
+<%= render "shared/second-header" %>
+
+    
+    <div class='account-page user-form'>
+      <%= form_with model: @profile,  local: true do |f|%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :pros%>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :pros%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :defect%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :defect%>
+          </div>
+        </div>
+          <%= f.submit "Update", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/second-footer" %>

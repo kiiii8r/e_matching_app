@@ -30,7 +30,6 @@
 | ----------------- | ---------- | -------------------------------------------------- |
 | id                | integer    |                                                    |
 | user_id           | integer    | uniqueness: true, foreign_key: true, null: false   |
-| image             | string     |                                                    |
 | prefecture_id     | references |                                                    |
 | introduction      | text       |                                                    |
 | hobby             | text       |                                                    |

@@ -89,6 +89,8 @@
   </div>
 
   
+  <% if current_user.id != @user[:id] %>
+  
   <div class="links">
     <a href="#" class="change-user-btn">
       ＜ 前の人
@@ -97,6 +99,9 @@
       次の人 ＞
     </a>
   </div>
+
+z<% end %>
+
   <%# <a href="#" class='another-user'><%= @userをもっと見る</a> %> %>
 </div>
 

@@ -3,12 +3,27 @@
  <div class='user-contents'>
     <h2 class='title'>ユーザー一覧</h2>
     <ul class='user-lists'>
+
+    
     
       <% @users.each do |user| %>
       <li class='list'>
         <%= link_to user_path(user.id) do %>
         <div class='user-img-content'>
-          <%= image_tag user.profile.image.variant(resize:'300x300'), class: "user-img" if user.profile.image.attached?  %>
+
+        <%if user.profile.image.present? %>
+
+          <%= image_tag user.profile.image.variant(resize:'300x300'), class: "user-img" if user.profile.image.attached? %>
+
+        <% elsif user.gender == "male" %>
+
+           <%= image_tag 'mens_silhouette.png', size: "300x300", class: "user-img" %>
+
+        <% else %>
+
+           <%= image_tag 'radies_silhouette.png', size: "300x300", class: "user-img" %>
+
+        <% end %>
 
         </div>
         <div class='user-info'>

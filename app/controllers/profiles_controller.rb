@@ -7,8 +7,8 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
-    if @profile.create(profile_params)
-      radirect_to users_path(@profile.user_id)
+    if @profile.save
+      redirect_to users_path
     else
       render :new
     end

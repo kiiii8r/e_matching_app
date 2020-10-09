@@ -29,8 +29,8 @@
 | Column            | Type       | Options              |
 | ----------------- | ---------- | -------------------- |
 | id                | integer    |                      |
-| image             | string     |                      |
 | user_id           | integer    |                      |
+| image             | string     |                      |
 | prefecture_id     | references |                      |
 | introduction      | text       |                      |
 | hobby             | text       |                      |

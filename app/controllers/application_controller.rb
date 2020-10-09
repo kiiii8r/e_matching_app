@@ -13,7 +13,11 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource) 
-    new_user_profile_path(@user.id)
+    if @user.profile.blank?
+      new_user_profile_path(@user.id)
+    else
+      users_path
+    end
   end
 
   def configure_permitted_parameters

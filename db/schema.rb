@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2020_10_09_021058) do
     t.bigint "language3_id"
     t.text "other_language"
     t.bigint "role_id"
-    t.integer "pros"
-    t.integer "defect"
+    t.text "pros"
+    t.text "defect"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["language1_id"], name: "index_profiles_on_language1_id"

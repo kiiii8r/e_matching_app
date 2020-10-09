@@ -40,8 +40,8 @@
 | language3_id      | references |                      |
 | other_language    | text       |                      |
 | role_id           | references |                      |
-| pros              | integer    |                      |
-| defect            | integer    |                      |
+| pros              | text       |                      |
+| defect            | text       |                      |
 
 ### Association
 

@@ -12,8 +12,8 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.references :language3
       t.text :other_language
       t.references :role
-      t.integer :pros
-      t.integer :defect
+      t.text :pros
+      t.text :defect
       t.timestamps
     end
   end

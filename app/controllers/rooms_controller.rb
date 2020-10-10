@@ -1,10 +1,4 @@
 class RoomsController < ApplicationController
-  def show
-    @message = Message.new
-    @room = Room.find(params[:user_id])
-    @messages = @room.messages.includes(:user)
-  end
-
   def create
     if @room = Room.create
       @room_user = RoomUser.create
@@ -12,4 +6,12 @@ class RoomsController < ApplicationController
     else
       rende user_path
     end
+  end
+
+  def show
+    @message = Message.new
+    @room = Room.new
+    @messages = @room.messages.includes(:user)
+    @user = User.find(params[:id])
+  end
 end

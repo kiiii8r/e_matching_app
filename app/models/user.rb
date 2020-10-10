@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile
+  has_many :room_users
+  has_many :messages
 
   with_options presence: true do
     validates :nickname

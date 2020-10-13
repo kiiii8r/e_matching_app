@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @profile = Profile.find(params[:id])
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)
+
   end
 end

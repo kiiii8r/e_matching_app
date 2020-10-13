@@ -19,19 +19,24 @@
     <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-red-btn" %>
     <p class='or-text'>or</p>
 
-    <% else %>
+    <% elsif @room_number.blank? %>
 
       <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
 
-        <%= f.submit "メッセージ", class: 'chat-room-form__action-btn'%>
+      <%= f.submit "初期メッセージ", class: 'chat-room-form__action-btn'%>
 
-         <%= link_to 'メッセージ', room_path(@room_number) %>
-
-        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-        <input name="room[user_ids][]" type="hidden" value=<%= @user.id %>>
+      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      <input name="room[user_ids][]" type="hidden" value=<%= @user.id %>>
+      <input name="partner_id[]" type="hidden" value=<%= @user.id %>>
 
       <% end %>
+
+    <% else %>
+
+      <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ) %>
+
     <% end %>
+
 
     <div class="user-explain-box">
       <span><%= @profile.introduction %></span>
@@ -108,7 +113,7 @@
     </a>
   </div>
 
-z<% end %>
+ <% end %>
 
   <%# <a href="#" class='another-user'><%= @userをもっと見る</a> %> %>
 </div>

@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_one :profile
   has_many :room_users
   has_many :messages
+  has_many :rooms, through: :room_users
 
   with_options presence: true do
     validates :nickname
@@ -12,6 +13,7 @@ class User < ApplicationRecord
     validates :gender
     validates :age
   end
+
 
   validates :password, format: { with: /\A[a-z0-9]+\z/i, message: 'Include both letters and numbers' }, allow_nil: true
 

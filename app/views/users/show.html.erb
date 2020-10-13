@@ -21,10 +21,16 @@
 
     <% else %>
 
-    
-    <%= link_to 'メッセージ', rooms_path, class:"user-red-btn"%>
-    <%= link_to 'メッセージ', room_path , class:"user-red-btn" %>
-    
+      <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
+
+        <%= f.submit "メッセージ", class: 'chat-room-form__action-btn'%>
+
+         <%= link_to 'メッセージ', room_path(@room_number) %>
+
+        <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        <input name="room[user_ids][]" type="hidden" value=<%= @user.id %>>
+
+      <% end %>
     <% end %>
 
     <div class="user-explain-box">

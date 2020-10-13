@@ -1,17 +1,23 @@
 class RoomsController < ApplicationController
+
   def create
-    if @room = Room.create
-      @room_user = RoomUser.create
-      rooms_path(room_id)
+    if @room = Room.create(room_params)
+      room_path(@room.id)
     else
-      rende user_path
+      render user_path
     end
   end
 
   def show
+    @user = User.find(current_user.id)
+    @room = Room.find(params[:id])
     @message = Message.new
-    @room = Room.new
     @messages = @room.messages.includes(:user)
-    @user = User.find(params[:id])
+  end
+
+  private
+
+  def room_params
+    params.require(:room).permit(user_ids:[])
   end
 end

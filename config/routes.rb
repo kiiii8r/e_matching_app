@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :profiles, only: [:new, :create, :edit, :update]
   end
+  resources :rooms, only: [:create, :show] do
+    resources :messages, only: :create
+  end
 end

@@ -1,0 +1,42 @@
+<div class="message">
+  <div class="upper-message">
+    <div class="message-user">
+
+      <% if message.user_id == @user.id %>
+
+        <%if @user.profile.image.present? %> 
+          <%= image_tag @user.profile.image.variant(resize:'50x50'), class:"user-img" if @user.profile.image.attached? %>
+        <% elsif @user.gender == "male" %>
+          <%= image_tag 'mens_silhouette.png', size: "50x50", class: "user-img" %>
+        <% else %>
+          <%= image_tag 'radies_silhouette.png', size: "50x50", class: "user-img" %>
+        <% end %>
+
+        <div class='user-message'><%= @user.nickname %></div>
+
+      <% else %>
+
+        <%if @partner.profile.image.present? %> 
+          <%= image_tag @partner.profile.image.variant(resize:'50x50'), class:"partner-img" if @partner.profile.image.attached? %>
+        <% elsif @partner.gender == "male" %>
+          <%= image_tag 'mens_silhouette.png', size: "50x50", class: "user-img" %>
+        <% else %>
+          <%= image_tag 'radies_silhouette.png', size: "50x50", class: "user-img" %>
+        <% end %>
+
+        <div class='partner-message'><%= @partner.nickname %></div>
+
+      <% end %>
+
+    </div>
+    <div class="message-date">
+      <%= message.created_at %>
+    </div>
+  </div>
+  <div class="lower-message">
+    <div class="message-content">
+      <%= message.message %>
+    </div>
+    <%= image_tag message.image.variant(resize:'500x500'), class: 'message-image' if message.image.attached? %>
+  </div>
+</div>

@@ -1,5 +1,15 @@
 <%= render "shared/contents-header" %>
 
+<h1>
+  ユーザー検索
+</h1>
+<%= search_form_for @p, url: users_search_path do |f| %>
+  <%= f.label :gender_eq, '性別' %>
+  <%= f.collection_select :gender_eq, @users_gender, :gender, :gender,  include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
  <div class='user-contents'>
     <h2 class='title'>ユーザー一覧</h2>
     <ul class='user-lists'>

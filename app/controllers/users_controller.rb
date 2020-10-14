@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :search_product, only: [:index, :search]
+  before_action :search_user, only: [:index, :search]
 
   def index
     @users = User.all.order('created_at DESC')
+    set_user_column
   end
 
   def front
@@ -21,7 +22,11 @@ class UsersController < ApplicationController
 
   private
 
-  def search_product
-    @p = User.ransack(params[:q])  # 検索オブジェクトを生成
+  def search_user
+    @p = User.ransack(params[:q])
+  end
+
+  def set_user_column
+    @users_gender = User.select("gender").distinct 
   end
 end

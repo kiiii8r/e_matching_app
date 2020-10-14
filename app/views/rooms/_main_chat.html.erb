@@ -23,5 +23,8 @@
       <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
+
+   <%= f.hidden_field :partner_id, value: @partner.id %>
+
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>

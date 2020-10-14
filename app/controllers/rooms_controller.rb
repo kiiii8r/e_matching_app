@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
   def create
     @partner = User.find(params[:partner_id])
     if @room = Room.create(room_params)
-      redirect_to room_path(@room.id, partner_id: @partner)
+      redirect_to room_path(@room.id, partner_id: params[:partner_id][0])
     else
       render user_path
     end

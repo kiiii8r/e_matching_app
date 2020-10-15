@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)
   end
 
+
   def search
     @results = @p.result.includes(:profile)
   end

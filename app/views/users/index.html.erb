@@ -7,6 +7,15 @@
   <%= f.label :gender_eq, '性別' %>
   <%= f.collection_select :gender_eq, @users_gender, :gender, :gender,  include_blank: '指定なし' %>
   <br>
+  <%= f.label :role_eq, '役割：' %>
+    <%= f.collection_select :role_id._eq, @profile_size, :size, :size, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :status_eq, '商品状態：' %>
+    <%= f.collection_select :status_eq, @product_status, :status, :status, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :category_name_eq, 'カテゴリー：' %>
+    <%= f.collection_select :category_name_eq, @category_name, :name, :name, include_blank: '指定なし' %>
+    <br>
   <%= f.submit '検索' %>
 <% end %>
 

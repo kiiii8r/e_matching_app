@@ -1,0 +1,58 @@
+<%= render "shared/contents-header" %>
+
+<h1>
+  検索結果
+</h1>
+
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+  <% unless current_user.id == user.id%>
+
+      <li class='list'>
+        <%= link_to user_path(user.id) do %>
+        <div class='user-img-content'>
+
+        <%if user.profile.image.present? %>
+
+          <%= image_tag user.profile.image.variant(resize:'300x300'), class: "user-img" if user.profile.image.attached? %>
+
+        <% elsif user.gender == "male" %>
+
+           <%= image_tag 'mens_silhouette.png', size: "300x300", class: "user-img" %>
+
+        <% else %>
+
+           <%= image_tag 'radies_silhouette.png', size: "300x300", class: "user-img" %>
+
+        <% end %>
+
+        </div>
+        <div class='user-info'>
+          <h3 class='user-name'>
+            <%= user.nickname %>
+          </h3>
+          <div class='user-language'>
+            <span><%= user.profile.language1.name %>言語</span>
+            <span><%= user.profile.language2.name %>言語</span>
+            <span><%= user.profile.language3.name %>言語</span>
+          </div>
+            <div class='user-role'>
+            <%= user.profile.role.name %>
+            </div>
+            <div class='star-btn'>
+              <%# <%= image_tag "star.png", class:"star-icon" %> %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+
+        <% end %>
+  <% end %>
+<% else %>
+  該当する商品はありません
+<% end %>
+<br>
+
+<%= render "shared/contents-footer" %>

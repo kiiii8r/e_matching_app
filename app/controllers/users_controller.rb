@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     @users = User.all.order('created_at DESC')
     set_user_column
     set_profile_column
-    binding.pry
   end
 
   def front
@@ -30,12 +29,15 @@ class UsersController < ApplicationController
   end
 
   def set_user_column
-    @users_gender = User.select("gender").distinct 
+    @user_gender = User.select("gender").distinct 
   end
 
   def set_profile_column
-    @profile_role = Profile.select("role").distinct
-    @profile_language = Profile.select("language1", "language2", "language3").distinct
-    @profile_prefecture = Profile.select("prefecture").distinct
+    @profile_role = Profile.select("role_id").distinct
+
+    @profile_language1 = Profile.select("language1_id").distinct
   end
 end
+
+(Profile.select("language1_id").map {|item| item.language1_id} + Profile.select("language2_id").map {|item| item.language2_id} + Profile.select("language3_id").map {|item| item.language3_id}).uniq
+    @profile_prefecture = Profile.select("prefecture_id").distinct

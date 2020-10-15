@@ -1,4 +1,4 @@
-class Language3 < ApplicationRecord
+class Language3 < ActiveHash::Base
   self.data = [
     { id: 0, name: '---' },
     { id: 1, name: 'HTML' },

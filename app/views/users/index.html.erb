@@ -4,17 +4,17 @@
   ユーザー検索
 </h1>
 <%= search_form_for @p, url: users_search_path do |f| %>
-  <%= f.label :gender_eq, '性別' %>
-  <%= f.collection_select :gender_eq, @users_gender, :gender, :gender,  include_blank: '指定なし' %>
+  <%= f.label :gender_eq, '性別：' %>
+  <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
   <br>
-  <%= f.label :role_eq, '役割：' %>
-    <%= f.collection_select :role_id._eq, @profile_size, :size, :size, include_blank: '指定なし'%>
+  <%= f.label :profile_role_eq, '役割：' %>
+    <%= f.collection_select :profile_role_id_eq, @profile_role, :role, :role, include_blank: '指定なし'%>
     <br>
-    <%= f.label :status_eq, '商品状態：' %>
-    <%= f.collection_select :status_eq, @product_status, :status, :status, include_blank: '指定なし'%>
+    <%= f.label :profile_language1_eq, '主な使用言語：'%>
+    <%= f.collection_select :profile_language1_eq, @profile_language1, :language1, :language1, include_blank: '指定なし' %> 
     <br>
-    <%= f.label :category_name_eq, 'カテゴリー：' %>
-    <%= f.collection_select :category_name_eq, @category_name, :name, :name, include_blank: '指定なし' %>
+    <%= f.label :profile_prefecture_eq, '都道府県：' %>
+    <%= f.collection_select :profile_prefecture_eq, @profile_prefecture, :prefecture, :prefecture, include_blank: '指定なし' %>
     <br>
   <%= f.submit '検索' %>
 <% end %>

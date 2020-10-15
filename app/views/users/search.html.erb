@@ -17,14 +17,14 @@
   <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
   <br>
   <%= f.label :profile_role_id_eq, '役割：' %>
-  <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+  <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"role"}) %>
     <br>
 
   <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
-  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"language1"}) %>
 
   <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
-  <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
+  <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"prefecture"}) %>
     <br>
   <%= f.submit '絞り込みで検索' %>
 <% end %>

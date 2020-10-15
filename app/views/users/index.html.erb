@@ -8,7 +8,7 @@
   <%= f.label :nickname_cont, 'ユーザー名' %>
   <%= f.text_field :nickname_cont %>
   <div>
-    <%= f.submit '名前検索' %>
+    <%= f.submit '名前で検索' %>
   </div>
 <% end %>
 
@@ -20,13 +20,13 @@
   <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
     <br>
 
-  <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
-  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+  <%= f.label :profile_language1_id_or_profile_language2_id_or_profile_language3_id_eq, '主な使用言語：' %>
+  <%= f.collection_select(:profile_language1_id_eq_or_profile_language2_id_eq_or_profile_language3_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
 
   <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
   <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
     <br>
-  <%= f.submit '絞り込み検索' %>
+  <%= f.submit '絞り込みで検索' %>
 <% end %>
 
  <div class='user-contents'>

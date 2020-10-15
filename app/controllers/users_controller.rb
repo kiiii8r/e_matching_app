@@ -22,6 +22,11 @@ class UsersController < ApplicationController
 
   def search
     @results = @p.result.includes(:profile)
+    @users = User.all
+    set_user_column
+
+    @search = User.search(params[:q])
+    @users = @search.result 
   end
 
   private

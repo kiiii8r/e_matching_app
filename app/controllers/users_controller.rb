@@ -4,7 +4,14 @@ class UsersController < ApplicationController
   def index
     @users = User.all.order('created_at DESC')
     set_user_column
-    set_profile_column
+
+    @search = User.search(params[:q])
+    @users = @search.result 
+
+    # respond_to do |format|
+    #   format.html 
+    #   format.json { render json: @users }
+    # end
   end
 
   def front
@@ -31,13 +38,4 @@ class UsersController < ApplicationController
   def set_user_column
     @user_gender = User.select("gender").distinct 
   end
-
-  def set_profile_column
-    @profile_role = Profile.select("role_id").distinct
-
-    @profile_language1 = Profile.select("language1_id").distinct
-  end
 end
-
-(Profile.select("language1_id").map {|item| item.language1_id} + Profile.select("language2_id").map {|item| item.language2_id} + Profile.select("language3_id").map {|item| item.language3_id}).uniq
-    @profile_prefecture = Profile.select("prefecture_id").distinct

@@ -7,11 +7,6 @@ class UsersController < ApplicationController
 
     @search = User.search(params[:q])
     @users = @search.result 
-
-    # respond_to do |format|
-    #   format.html 
-    #   format.json { render json: @users }
-    # end
   end
 
   def front

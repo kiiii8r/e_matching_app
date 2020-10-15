@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def index
     @users = User.all.order('created_at DESC')
     set_user_column
+    set_profile_column
+    binding.pry
   end
 
   def front
@@ -29,5 +31,11 @@ class UsersController < ApplicationController
 
   def set_user_column
     @users_gender = User.select("gender").distinct 
+  end
+
+  def set_profile_column
+    @profile_role = Profile.select("role").distinct
+    @profile_language = Profile.select("language1", "language2", "language3").distinct
+    @profile_prefecture = Profile.select("prefecture").distinct
   end
 end

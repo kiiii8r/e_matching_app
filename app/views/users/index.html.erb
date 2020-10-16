@@ -1,33 +1,41 @@
 <%= render "shared/contents-header" %>
 
-<h1>
-  ユーザー検索
-</h1>
+<div class ='left-contents'>
 
-<%= search_form_for @search do |f| %>
-  <%= f.label :nickname_cont, 'ユーザー名' %>
-  <%= f.text_field :nickname_cont %>
-  <div>
-    <%= f.submit '名前で検索' %>
-  </div>
-<% end %>
+  <h1>
+    ユーザー検索
+  </h1>
 
-<%= search_form_for @p, url: users_search_path do |f| %>
-  <%= f.label :gender_eq, '性別：' %>
-  <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :profile_role_id_eq, '役割：' %>
-  <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+  <%= search_form_for @search do |f| %>
+    <%= f.label :nickname_cont, 'ユーザー名' %>
+    <%= f.text_field :nickname_cont %>
+    <div>
+      <%= f.submit '名前で検索' %>
+    </div>
+  <% end %>
+
+  <%= search_form_for @p, url: users_search_path do |f| %>
+    <%= f.label :gender_eq, '性別：' %>
+    <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
     <br>
+    <%= f.label :profile_role_id_eq, '役割：' %>
+    <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+      <br>
 
-  <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
-  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+    <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
+    <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
 
-  <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
-  <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
-    <br>
-  <%= f.submit '絞り込みで検索' %>
-<% end %>
+    <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
+    <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
+      <br>
+    <%= f.submit '絞り込みで検索' %>
+  <% end %>
+
+</div>
+
+<div class ='right-contents'></div>
+
+<div class ='main-contents'>
 
  <div class='user-contents'>
     <h2 class='title'>ユーザー一覧</h2>
@@ -80,5 +88,7 @@
 
         <% end %>
       <% end %>
+
+</div>
 
 <%= render "shared/contents-footer" %>

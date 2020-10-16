@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "users#front"
+  get 'users/search' 
   resources :users, only: [:index, :show] do
     resources :profiles, only: [:new, :create, :edit, :update]
   end

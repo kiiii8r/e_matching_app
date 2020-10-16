@@ -17,14 +17,14 @@
   <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
   <br>
   <%= f.label :profile_role_id_eq, '役割：' %>
-  <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+  <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"role"}) %>
     <br>
 
   <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
-  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+  <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  }, {class:"select-box", id:"language1"}) %>
 
   <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
-  <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
+  <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"prefecture"}) %>
     <br>
   <%= f.submit '絞り込みで検索' %>
 <% end %>
@@ -33,20 +33,20 @@
     <h2 class='title'>ユーザー一覧</h2>
     <ul class='user-lists'>
 
-    
-      <% @users.each do |user| %>
 
-      <% unless current_user.id == user.id%>
+<% if @results.length !=0 %>
+  <% @results.each do |result| %>
+  <% unless current_user.id == result.id%>
 
       <li class='list'>
-        <%= link_to user_path(user.id) do %>
+        <%= link_to user_path(result.id) do %>
         <div class='user-img-content'>
 
-        <%if user.profile.image.present? %>
+        <%if result.profile.image.present? %>
 
-          <%= image_tag user.profile.image.variant(resize:'300x300'), class: "user-img" if user.profile.image.attached? %>
+          <%= image_tag result.profile.image.variant(resize:'300x300'), class: "user-img" if result.profile.image.attached? %>
 
-        <% elsif user.gender == "male" %>
+        <% elsif result.gender == "male" %>
 
            <%= image_tag 'mens_silhouette.png', size: "300x300", class: "user-img" %>
 
@@ -59,15 +59,15 @@
         </div>
         <div class='user-info'>
           <h3 class='user-name'>
-            <%= user.nickname %>
+            <%= result.nickname %>
           </h3>
           <div class='user-language'>
-            <span><%= user.profile.language1.name %>言語</span>
-            <span><%= user.profile.language2.name %>言語</span>
-            <span><%= user.profile.language3.name %>言語</span>
+            <span><%= result.profile.language1.name %>言語</span>
+            <span><%= result.profile.language2.name %>言語</span>
+            <span><%= result.profile.language3.name %>言語</span>
           </div>
             <div class='user-role'>
-            <%= user.profile.role.name %>
+            <%= result.profile.role.name %>
             </div>
             <div class='star-btn'>
               <%# <%= image_tag "star.png", class:"star-icon" %> %>
@@ -79,6 +79,10 @@
       </li>
 
         <% end %>
-      <% end %>
+  <% end %>
+<% else %>
+  該当するユーザーは存在しませんでした。
+<% end %>
+<br>
 
 <%= render "shared/contents-footer" %>

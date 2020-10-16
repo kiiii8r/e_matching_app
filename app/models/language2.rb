@@ -10,8 +10,9 @@ class Language2 < ActiveHash::Base
     { id: 7, name: 'SQL' },
     { id: 8, name: 'Go' },
     { id: 9, name: 'Swift' },
-    { id: 10, name: 'C' },
-    { id: 11, name: 'C#' },
-    { id: 12, name: 'C++' }
+    { id: 10, name: 'Python'},
+    { id: 11, name: 'C' },
+    { id: 12, name: 'C#' },
+    { id: 13, name: 'C++' }
   ]
 end

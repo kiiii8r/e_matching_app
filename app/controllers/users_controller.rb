@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     set_user_column
 
     @search = User.search(params[:q])
-    @users = @search.result 
+    @users = @search.result
   end
 
   def front
@@ -19,14 +19,13 @@ class UsersController < ApplicationController
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)
   end
 
-
   def search
     @results = @p.result.includes(:profile)
     @users = User.all
     set_user_column
 
     @search = User.search(params[:q])
-    @users = @search.result 
+    @users = @search.result
   end
 
   private
@@ -36,6 +35,6 @@ class UsersController < ApplicationController
   end
 
   def set_user_column
-    @user_gender = User.select("gender").distinct 
+    @user_gender = User.select('gender').distinct
   end
 end

@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
-
   def create
     @partner = User.find(params[:partner_id])
     if @room = Room.create(room_params)
@@ -20,6 +19,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(user_ids:[])
+    params.require(:room).permit(user_ids: [])
   end
 end

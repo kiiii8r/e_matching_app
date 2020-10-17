@@ -90,19 +90,24 @@
                   </div>
 
                   <div class='user-info'>
-                    <h3 class='user-name'>
-                      <%= result.nickname %>
-                    </h3>
 
-                    <div class='user-language'>
-                      <span><%= result.profile.language1.name %>言語</span>
-                      <span><%= result.profile.language2.name %>言語</span>
-                      <span><%= result.profile.language3.name %>言語</span>
+                    <div class='user-title'>
+                      <h3 class='user-name'><%= result.nickname %></h3>
+                      <div class='user-age'><%= result.age %>歳</div>
                     </div>
 
-                    <div class='user-role'>
+                     <div class='detail-lists'>
+                    <div class='detail-title'>
+                      <div class='user-language'>主用言語</div>
+                      <%= result.profile.language1.name %>
+                    </div>
+
+                    <div class='detail-title'>
+                      <div class='user-role'>主な役割</div>
                       <%= result.profile.role.name %>
                     </div>
+                  </div>
+
 
                     <div class='star-btn'>
                       <%# <%= image_tag "star.png", class:"star-icon" %> 

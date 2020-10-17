@@ -88,9 +88,11 @@
                 </div>
 
                 <div class='user-info'>
-                  <h3 class='user-name'>
-                    <%= user.nickname %>
-                  </h3>
+
+                  <div class='user-title'>
+                    <h3 class='user-name'><%= user.nickname %></h3>
+                    <div class='user-age'><%= user.age %>歳</div>
+                  </div>
             
                   <div class='detail-lists'>
                     <div class='detail-title'>

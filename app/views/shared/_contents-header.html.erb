@@ -23,7 +23,7 @@
 
       <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
 
-      <li><%= link_to 'Users page', users_path, class: "users-link" %></li>
+      <li><%= link_to 'ユーザー一覧', users_path, class: "users-link" %></li>
 
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
     

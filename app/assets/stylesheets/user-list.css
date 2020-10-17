@@ -41,7 +41,7 @@
 }
 
 .list {
-  padding: 30px 20px;
+  padding: 30px 10px;
   display: flex;
   scroll-snap-align: start;
   height: 55vh;
@@ -49,6 +49,20 @@
 
 .user-info {
   text-align: center;
+}
+
+.user-title {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.user-name {
+  padding-right: 7px;
+}
+
+.user-age {
+  font-size: 12px;
 }
 
 .detail-lists {

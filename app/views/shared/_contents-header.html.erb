@@ -2,34 +2,36 @@
 <header>
   <div class='nav'>
     <div class='nav-upper'>
-        <ul class='lists-upper'>
-            <li><a class="top-logo" href="#">●</a></li>
-            <li><a class="top-first" href="#">1</a></li> 
-            <li><a class="top-second" href="#">2</a></li>
-            <li><a class="top-third" href="#">3</a></li> 
-            <li><a class="top-fourth" href="#">4</a></li>
-            <li><a class="top-fifth" href="#">5</a></li> 
-            <li><a class="top-sixth" href="#">6</a></li>
-            <li><a class="top-seventh" href="#">7</a></li>
-            <li><a class="top-search" href="#">🔍</a></li>
-            <li><a class="top-second-logo" href="#">⬜️</a></li> 
-        </ul>
+      <ul class='lists-upper'>
+        <li><a class="top-logo" href="#">●</a></li>
+        <li><a class="top-first" href="#">1</a></li> 
+        <li><a class="top-second" href="#">2</a></li>
+        <li><a class="top-third" href="#">3</a></li> 
+        <li><a class="top-fourth" href="#">4</a></li>
+        <li><a class="top-fifth" href="#">5</a></li> 
+        <li><a class="top-sixth" href="#">6</a></li>
+        <li><a class="top-seventh" href="#">7</a></li>
+        <li><a class="top-search" href="#">🔍</a></li>
+        <li><a class="top-second-logo" href="#">⬜️</a></li> 
+      </ul>
     </div>
-      <div class='nav-lower-lock' >
-        <div class='nav-lower'>
-            <div class='lower-contents'>
-                <div class='header-title'>Match Pro</div>
-                <ul class='lists-lower'>
+    <div class='nav-lower-lock' >
+      <div class='nav-lower'>
+        <div class='lower-contents'>
+          <div class='header-title'>Match Pro</div>
+            <ul class='lists-lower'>
 
-      <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
+              <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
-      <li><%= link_to 'ユーザー一覧', users_path, class: "users-link" %></li>
+              <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
 
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id), class: "point-font" %></li>
+
     
-           </ul>
-            </div>
+            </ul>
+          </div>
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </header>

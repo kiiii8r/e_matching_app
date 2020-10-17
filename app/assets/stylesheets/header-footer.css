@@ -40,7 +40,7 @@
 
 .lower-contents  {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   width: 1025px;
 }
@@ -53,12 +53,35 @@
 
 .lists-lower   {
   display: flex;
+  align-items: center;
 }
 
-.lists-lower a {
-  color: black; 
+.lists-lower a { 
   padding: 0 10px;
-  font-size: 12px;
+  font-size: 11px;
+}
+
+.header-link {
+  color: black;
+}
+
+.header-link:hover {
+  color: rgb(38, 102, 221);
+}
+
+.blue-point {
+  background-color: rgb(39, 99, 211);
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.blue-point:hover {
+  background-color: rgb(59, 113, 212);
+}
+
+.point-font {
+  padding: 10px;
+  color: white;
 }
 
 .main-contents {

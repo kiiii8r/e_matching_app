@@ -1,31 +1,72 @@
+.search-title {
+  text-align: center;
+}
+
+.search-title {
+  border-bottom: 1px gray solid;
+}
+
+.search-lists {
+  padding: 20px;
+}
+
 .search-contents {
-  width: 350px;
+  width: 250px;
   padding: 10px;
   margin: 20px;
   background-color: lightgray;
+  border: 1px gray solid;
 }
 
+.search-btn {
+  text-align: right;
+}
 
 .main {
   display: flex;
+}
+
+.user-list-title {
+}
+
+.user-contents {
+  text-align: center;
+  width: 70%;
 }
 
 .user-lists {
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
   height: 100vh;
+  justify-content: center;
 }
 
-
 .list {
-  padding: 20px;
+  padding: 30px 20px;
   display: flex;
   scroll-snap-align: start;
-  height: 70vh;
+  height: 55vh;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.detail-lists {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-title {
+  padding: 0 30px;
 }
 
 .list a {
-  color: rgba(0, 0, 0, 0.952);;
+  color: rgba(0, 0, 0, 0.952);
+}
+
+.no-users {
+  padding: 50px;
 }

@@ -1,94 +1,126 @@
 <%= render "shared/contents-header" %>
 
 <div class ='main-contents'>
+
   <div class='main'>
     <div class='search-contents'>
 
-  <h2>
-    ユーザー検索
-  </h2>
+      <h2 class='search-title'>Search</h2>
 
-  <%= search_form_for @search do |f| %>
-    <%= f.label :nickname_cont, 'ユーザー名' %>
-    <%= f.text_field :nickname_cont %>
-    <div>
-      <%= f.submit '名前で検索' %>
-    </div>
-  <% end %>
+      <%= search_form_for @search do |f| %>
 
-  <%= search_form_for @p, url: users_search_path do |f| %>
-    <%= f.label :gender_eq, '性別：' %>
-    <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
-    <br>
-    <%= f.label :profile_role_id_eq, '役割：' %>
-    <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
-      <br>
+        <div class='search-lists'>
+          <h3 class='search-name'>◆名前で検索</h3>
 
-    <%= f.label :profile_language1_id_eq, '主用言語：' %>
-    <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
-<br>
-    <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
-    <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
-      <br>
-    <%= f.submit '絞り込みで検索' %>
-  <% end %>
-  </form>
-</div>
+          <%= f.label :nickname_cont, 'ユーザー名' %>
+          <%= f.text_field :nickname_cont %>
 
- <div class='user-contents'>
-    <h2 class='title'>ユーザー一覧</h2>
-
-    <ul class='user-lists'>
-
-    
-      <% @users.each do |user| %>
-
-      <% unless current_user.id == user.id%>
-
-      <li class='list'>
-        <%= link_to user_path(user.id) do %>
-        <div class='user-img-content'>
-
-        <%if user.profile.image.present? %>
-
-          <%= image_tag user.profile.image.variant(resize:'300x300'), class: "user-img" if user.profile.image.attached? %>
-
-        <% elsif user.gender == "male" %>
-
-           <%= image_tag 'mens_silhouette.png', size: "300x300", class: "user-img" %>
-
-        <% else %>
-
-           <%= image_tag 'radies_silhouette.png', size: "300x300", class: "user-img" %>
-
-        <% end %>
-
+          <div class='search-btn'>
+            <%= f.submit '検索' %>
+          </div>
         </div>
-        <div class='user-info'>
-          <h3 class='user-name'>
-            <%= user.nickname %>
-          </h3>
-          <div class='user-language'>
-            <span><%= user.profile.language1.name %>言語</span>
-            <span><%= user.profile.language2.name %>言語</span>
-            <span><%= user.profile.language3.name %>言語</span>
-          </div>
-            <div class='user-role'>
-            <%= user.profile.role.name %>
-            </div>
-            <div class='star-btn'>
-              <%# <%= image_tag "star.png", class:"star-icon" %> 
-              <span class='star-count'></span>
-            </div>
-          </div>
-        <% end %>
-      </li>
-        <% end %>
+
       <% end %>
 
-    </ul>
+      <%= search_form_for @p, url: users_search_path do |f| %>
+
+        <div class='search-lists'>
+          <h3 class='search-name'>◆絞り込みで検索</h3>
+
+          <%= f.label :gender_eq, '性別：' %>
+          <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
+
+          <br>
+
+          <%= f.label :profile_role_id_eq, '役割：' %>
+          <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+
+          <br>
+
+          <%= f.label :profile_language1_id_eq, '主用言語：' %>
+          <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+
+          <br>
+
+          <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
+          <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
+
+          <br>
+
+          <div class='search-btn'>
+            <%= f.submit '検索' %>
+          </div>
+        </div>
+
+      <% end %>
+
     </div>
+
+    <div class='user-contents'>
+      <h2 class='user-list-title'>Users list</h2>
+
+      <ul class='user-lists'>
+
+        <% @users.each do |user| %>
+
+          <% unless current_user.id == user.id %>
+
+            <li class='list'>
+
+              <%= link_to user_path(user.id) do %>
+
+                <div class='user-img-content'>
+
+                  <%if user.profile.image.present? %>
+
+                    <%= image_tag user.profile.image.variant(gravity: :center, resize:"250x250^", crop:"250x250+0+0"), class: "user-img" if user.profile.image.attached? %>
+
+                  <% elsif user.gender == "male" %>
+
+                    <%= image_tag 'mens_silhouette.png', size: "250x250", class: "user-img" %>
+
+                  <% else %>
+
+                    <%= image_tag 'radies_silhouette.png', size: "250x250", class: "user-img" %>
+
+                  <% end %>
+
+                </div>
+
+                <div class='user-info'>
+                  <h3 class='user-name'>
+                    <%= user.nickname %>
+                  </h3>
+            
+                  <div class='detail-lists'>
+                    <div class='detail-title'>
+                      <div class='user-language'>主用言語</div>
+                      <%= user.profile.language1.name %>
+                    </div>
+
+                    <div class='detail-title'>
+                      <div class='user-role'>主な役割</div>
+                      <%= user.profile.role.name %>
+                    </div>
+                  </div>
+
+                  <div class='star-btn'>
+                    <%# <%= image_tag "star.png", class:"star-icon" %> 
+                    <span class='star-count'></span>
+                  </div>
+                </div>
+
+              <% end %>
+
+            </li>
+
+          <% end %>
+
+        <% end %>
+
+      </ul>
     </div>
-    </div>
+  </div>
+</div>
 
 <%= render "shared/contents-footer" %>

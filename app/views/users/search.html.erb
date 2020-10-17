@@ -1,8 +1,12 @@
 <%= render "shared/contents-header" %>
 
-<h1>
+<div class ='main-contents'>
+  <div class='main'>
+    <div class='search-contents'>
+
+<h2>
   ユーザー検索
-</h1>
+</h2>
 
 <%= search_form_for @search do |f| %>
   <%= f.label :nickname_cont, 'ユーザー名' %>
@@ -20,14 +24,16 @@
   <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"role"}) %>
     <br>
 
-  <%= f.label :profile_language1_id_eq, '主な使用言語：' %>
+  <%= f.label :profile_language1_id_eq, '主用言語：' %>
   <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  }, {class:"select-box", id:"language1"}) %>
-
+<br>
   <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
   <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし' }, {class:"select-box", id:"prefecture"}) %>
     <br>
   <%= f.submit '絞り込みで検索' %>
 <% end %>
+</form>
+</div>
 
  <div class='user-contents'>
     <h2 class='title'>ユーザー一覧</h2>
@@ -70,7 +76,7 @@
             <%= result.profile.role.name %>
             </div>
             <div class='star-btn'>
-              <%# <%= image_tag "star.png", class:"star-icon" %> %>
+              <%# <%= image_tag "star.png", class:"star-icon" %> 
               <span class='star-count'>0</span>
             </div>
           </div>
@@ -83,6 +89,10 @@
 <% else %>
   該当するユーザーは存在しませんでした。
 <% end %>
-<br>
+
+    </ul>
+    </div>
+    </div>
+    </div>
 
 <%= render "shared/contents-footer" %>

@@ -1,0 +1,31 @@
+.search-contents {
+  width: 350px;
+  padding: 10px;
+  margin: 20px;
+  background-color: lightgray;
+}
+
+
+.main {
+  display: flex;
+}
+
+.user-lists {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+
+.list {
+  padding: 20px;
+  display: flex;
+  scroll-snap-align: start;
+  height: 70vh;
+}
+
+.list a {
+  color: rgba(0, 0, 0, 0.952);;
+}

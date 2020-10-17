@@ -67,3 +67,30 @@
 .no-users {
   padding: 50px;
 }
+
+.input-name {
+  margin: 5px;
+}
+
+.input-birth-wrap {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+}
+
+.input-age {
+  font-size: larger;
+  text-align: center;
+}
+
+.form-text {
+  font-weight: bold;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.input-register-btn {
+  padding-bottom: 100px;
+}

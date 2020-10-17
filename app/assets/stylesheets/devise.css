@@ -2,6 +2,13 @@
   text-align: center;
   padding-top: 130px;
   height: 600px;
+  overflow: auto;
+  scroll-snap-type: mandatory;
+}
+
+.contents-indication {
+  scroll-snap-align: start;
+  height: 55vh;
 }
 
 .form-group {

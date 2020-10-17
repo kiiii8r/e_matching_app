@@ -1,0 +1,21 @@
+.contents {
+  text-align: center;
+  padding-top: 130px;
+  height: 600px;
+}
+
+.form-group {
+  padding: 20px;
+}
+
+.form-text-wrap {
+  padding: 10px; 
+}
+
+.input-default {
+  width: 200px;
+}
+
+.login-btn {
+  margin: 10px;
+}

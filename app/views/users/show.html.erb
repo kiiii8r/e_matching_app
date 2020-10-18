@@ -126,17 +126,12 @@
         </div>
       </div>
     </div>
-    
-    <div class="links">
-      <%= link_to '＜ 前の人', user_path(@user.id - 1), class: "change-user-btn" %>
-      <%= link_to '次の人 ＞', user_path(@user.id + 1), class: "change-user-btn" %>
-    </div>
-
+  
     <% if current_user.id != @user[:id] %>
 
       <div class="option">
           <div class="report-btn">
-            <span>通報</span>
+            <span>- 通報 -</span>
           </div>
         </div>
 

@@ -36,3 +36,14 @@
 .input-age {
   padding: 3px;
 }
+
+.registrater-btn {
+  padding: 10px 30px;
+  background-color: lightgray; 
+  margin-bottom: 15px;
+}
+
+.indication {
+  margin: 5px;
+  font-size: 20px;
+}

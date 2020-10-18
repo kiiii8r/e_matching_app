@@ -42,10 +42,6 @@
   font-size: large;
 }
 
-.user-detail {
-
-}
-
 .detail-contents  {
   align-items: center;
   padding: 20px;
@@ -60,17 +56,6 @@
   border-bottom: 1px gray solid;
 }
 
-.links {
-  text-align: center;
-  padding: 50px 0 30px 0;
-}
-
-.change-user-btn {
-  color: black;
-  font-size: larger;
-  padding: 0 50px;
-}
-
 .option {
   text-align: center;
   padding-bottom: 10px;
@@ -79,4 +64,5 @@
 .report-btn {
   color: red;
   font-size: large;
+  margin: 20px;
 }

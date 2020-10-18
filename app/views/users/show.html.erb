@@ -29,15 +29,15 @@
         
           <%if @user.profile.image.present? %>
 
-              <%= image_tag @user.profile.image.variant(gravity: :center, resize:"330x330^", crop:"330x330+0+0"), class: "user-show-img" if @user.profile.image.attached? %>
+              <%= image_tag @user.profile.image, class: "user-show-img" if @user.profile.image.attached? %>
 
           <% elsif @user.gender == "male" %>
 
-            <%= image_tag 'mens_silhouette.png', size: "400x400", class: "shadow-img" %>
+            <%= image_tag 'mens_silhouette.png', size: "400x400", class: "user-show-img" %>
 
           <% else %>
 
-            <%= image_tag 'radies_silhouette.png', size: "400x400", class: "shadow-img" %>
+            <%= image_tag 'radies_silhouette.png', size: "400x400", class: "user-show-img" %>
 
           <% end %>
       

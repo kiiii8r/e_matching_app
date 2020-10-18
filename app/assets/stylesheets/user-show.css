@@ -27,13 +27,8 @@
 }
 
 .user-show-img {
-  width: 80%;
-  height: 47vh;
-}
-
-.shadow-img {
-  width: 80%;
-  height: 53vh;
+  width: 50vh;
+  height: 50vh;
 }
 
 .user-btn {

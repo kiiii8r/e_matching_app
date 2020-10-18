@@ -19,11 +19,11 @@
 }
 
 .messages {
-overflow: auto;
-scroll-snap-type: mandatory;
-height: calc(100% - 220px);
-background-color: white;
-border-right: 1px lightgray solid;
+  overflow: auto;
+  scroll-snap-type: mandatory;
+  height: calc(100% - 220px);
+  background-color: white;
+  border-right: 1px lightgray solid;
 }
 
 .message-user {

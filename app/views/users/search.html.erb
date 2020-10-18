@@ -37,8 +37,8 @@
 
           <br>
 
-          <%= f.label :profile_language1_id_eq, '主用言語：' %>
-          <%= f.collection_select(:profile_language_id_eq, Language.all, :id, :name, { include_blank: '指定なし'  }, {class:"select-box", id:"language1"}) %>
+          <%= f.label :profile_other_language_cont, 'その他言語：' %>
+          <%= f.text_field :profile_other_language_cont %>
 
           <br>
 
@@ -71,19 +71,19 @@
 
                 <%= link_to user_path(result.id) do %>
 
-                  <div class='user-img-content'>
+                  <div class='list-content'>
 
                     <%if result.profile.image.present? %>
 
-                       <%= image_tag result.profile.image.variant(gravity: :center, resize:"250x250^", crop:"250x250+0+0"), class: "user-img" if result.profile.image.attached? %>
+                       <%= image_tag result.profile.image, class: "list-img" if result.profile.image.attached? %>
 
                     <% elsif result.gender == "male" %>
 
-                      <%= image_tag 'mens_silhouette.png', size: "250x250", class: "user-img" %>
+                      <%= image_tag 'mens_silhouette.png', class: "list-img" %>
 
                     <% else %>
 
-                      <%= image_tag 'radies_silhouette.png', size: "250x250", class: "user-img" %>
+                      <%= image_tag 'radies_silhouette.png',  class: "list-img" %>
 
                     <% end %>
 
@@ -91,28 +91,30 @@
 
                   <div class='user-info'>
 
-                    <div class='user-title'>
-                      <h3 class='user-name'><%= result.nickname %></h3>
-                      <div class='user-age'><%= result.age %>歳</div>
+                    <div class='list-upper'>
+                    <div class='list-name'>
+                      <div class='list-title'>名前</div>
+                      <%= result.nickname %>
                     </div>
 
-                     <div class='detail-lists'>
-                    <div class='detail-title'>
-                      <div class='user-language'>主用言語</div>
-                      <%= result.profile.language.name %>
+                    <div class='list-age'>
+                      <div class='list-title'>年齢</div>
+                      <%= result.age %>歳
                     </div>
 
-                    <div class='detail-title'>
-                      <div class='user-role'>主な役割</div>
+                    <div class='list-role'>
+                      <div class='list-title'>主な役割</div>
                       <%= result.profile.role.name %>
                     </div>
                   </div>
-
-
-                    <div class='star-btn'>
-                      <%# <%= image_tag "star.png", class:"star-icon" %> 
-                      <span class='star-count'></span>
+            
+                  <div class='list-lower'>
+                    <div class='list-language'>
+                      <div class='lower-list-title'><span class='lower-title'>使用言語</span></div>
+                      <%= result.profile.language.name %>
                     </div>
+                  </div>
+
                   </div>
 
                 <% end %>

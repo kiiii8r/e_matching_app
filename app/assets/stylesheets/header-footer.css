@@ -90,9 +90,32 @@
 
 /* footer css */
 
+.footer {
+  z-index: 9999;
+  background-color: white;
+  height:450px;
+}
+
 .footer-contents {
   text-align: center;
-  margin: 20px;
+  background-color: whitesmoke;
+}
+
+.main-text {
+  font-size: 33px;
+  font-weight: 900;
+  width: 900px;
+  color: gray;
+}
+
+.text-black {
+  color: black;
+}
+
+.match-details {
+  margin-top: 100px;
+  padding-top: 50px;
+  border-top: 1px gray solid;
 }
 
 .footer-link {
@@ -102,6 +125,5 @@
 .footer-logo {
   text-align: center;
   margin: 30px 30px 30px 0;
+  
 }
-
-

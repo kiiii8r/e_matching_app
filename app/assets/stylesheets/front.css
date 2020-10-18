@@ -1,3 +1,54 @@
-.front-iamge{
+.front-show {
   height: 600px;
+  text-align: center;
 }
+
+.back-signup {
+  position: absolute;
+  width: 88%;
+  font-weight: 600;
+  font-size: 80px;
+  padding-top: 150px;
+  z-index: 100;
+  opacity: 0;
+  transition: 1s;
+  padding-bottom: 400px;
+  align-content: center;
+}
+
+.back-signup:hover{
+  z-index: 600;
+  background-color: whitesmoke;
+  opacity: 100;
+}
+
+.back-signup a {
+  border-radius: 50px;
+  color: white;
+  padding: 30px;
+  background-color: rgb(39, 99, 211);
+}
+
+.match-front {
+  position: relative;
+  position: fixed;
+  transition: 2s;
+  z-index: 500;
+  height: 500px;
+}
+
+.match-front:hover {
+  opacity: 0;
+  z-index: 0;
+}
+
+.match-title {
+  position: fixed;
+  width: 88%;
+  font-size: 150px;
+  font-weight: 800;
+  color: black;
+  background-color: whitesmoke;
+  padding-bottom: 300px;
+}
+

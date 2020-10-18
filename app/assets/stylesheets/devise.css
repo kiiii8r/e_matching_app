@@ -26,3 +26,13 @@
 .login-btn {
   margin: 10px;
 }
+
+.input-age-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-age {
+  padding: 3px;
+}

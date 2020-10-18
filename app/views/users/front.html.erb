@@ -7,9 +7,15 @@
 
 <div class ='main-contents'>
 
-    <div class='contents'></div>
-
-    <%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
+    <div class='front-show'>
+            <div class='back-signup'><%= link_to 'Sign up!', new_user_registration_path, class: "sign-up" %>
+            </div>
+           
+        <div class='match-front'>
+             <div class='match-title'>eMatch Pro</div>
+        </div>
+    </div>
+ 
 </div>
 
 <%= render "shared/front-footer" %>

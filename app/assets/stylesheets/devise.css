@@ -47,3 +47,9 @@
   margin: 5px;
   font-size: 20px;
 }
+
+.set-age {
+  opacity: 0;
+  height: 5px;
+
+}

@@ -44,7 +44,7 @@
         </div>
 
         <div class="user-btn">
-        
+
           <% if current_user.id == @user[:id] %>
 
             <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
@@ -71,8 +71,10 @@
         </div>
 
         <div class="user-explain-box">
-          <div class="user-explain">自己紹介</div>
-          <span><%= @profile.introduction %></span>
+          <div class="user-explain">
+            <div class="explain-title">自己紹介</div>
+          </div>
+          <div class="explain-text"><%= @profile.introduction %></div>
         </div>
         
 
@@ -81,47 +83,47 @@
       <div class="user-detail">
         <div class="detail-contents">
           <div class="detail-list">
-            <div class="detail-name">年齢</div>
+            <div class="detail-name">年齢：</div>
             <div class="detail-value"><%= @user.age %></div>
           </div>
             
           <div class="detail-list">
-            <div class="detail-name">住み</div>
+            <div class="detail-name">住み：</div>
             <div class="detail-value"><%= @profile.prefecture.name %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">主な役割</div>
+            <div class="detail-name">主な役割：</div>
             <div class="detail-value"><%= @profile.role.name %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">主な使用言語</div>
+            <div class="detail-name">主用言語：</div>
             <div class="detail-value"><%= @profile.language.name %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">その他使用言語</div>
+            <div class="detail-name">その他言語：</div>
             <div class="detail-value"><%= @profile.other_language %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">目標</div>
+            <div class="detail-name">目標：</div>
             <div class="detail-value"><%= @profile.target %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">趣味</div>
+            <div class="detail-name">趣味：</div>
             <div class="detail-value"><%= @profile.hobby %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">長所</div>
+            <div class="detail-name">長所：</div>
             <div class="detail-value"><%= @profile.pros %></div>
           </div>
 
           <div class="detail-list">
-            <div class="detail-name">短所</div>
+            <div class="detail-name">短所：</div>
             <div class="detail-value"><%= @profile.defect %></div>
           </div>
         </div>

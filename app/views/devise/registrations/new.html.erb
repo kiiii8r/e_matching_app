@@ -119,9 +119,9 @@
             <span class="indispensable">生年月日で自動入力（公開されます）</span>
 
             <div class="input-age-wrap">
-              <%= f.label  :age, class:'input-age', id:'result-age', value: 'result-age' %>
-              <%= f.hidden_field  :age, id:'result-age', value: 'result-age' %>歳
+              <%= f.label  :age, class:'input-age', id:'result-age', value: 'result-age' %>歳
             </div>
+             <%= f.text_area  :age, class:'set-age', id:'result-set', value: 'result-set' %>
           </div>
         </div>
 

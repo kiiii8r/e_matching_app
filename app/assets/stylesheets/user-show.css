@@ -52,18 +52,45 @@
   font-size: large;
 }
 
+.explain-title {
+  display: inline-block;
+  padding: 0 13px;
+  border-bottom: 1px lightgray solid;
+}
+
+.explain-text {
+  margin: 3px;
+  font-size: 18px;
+}
+
 .detail-contents  {
   align-items: center;
-  padding: 20px;
+  padding-top: 30px;
+}
+
+.user-detail {
+  height: 100%;
+  width: 45%;
 }
 
 .detail-list {
   display: flex;
-  padding: 10px;
+  padding: 25px 13px 0 13px;
+  font-size: 18px;
+  border-bottom: 1px lightgray solid; 
 }
 
 .detail-name {
-  border-bottom: 1px gray solid;
+  display: inline-block;
+  width: 25%;
+  text-align: right ;
+  font-weight: 600;
+}
+
+.detail-value {
+  display: inline-block;
+  text-align: center;
+  width: 75%;
 }
 
 .option {

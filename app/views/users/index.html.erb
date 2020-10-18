@@ -42,6 +42,11 @@
 
           <br>
 
+          <%= f.label :profile_other_language_cont, 'その他言語：' %>
+          <%= f.text_field :profile_other_language_cont %>
+
+          <br>
+
           <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
           <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
 
@@ -89,8 +94,11 @@
 
                 <div class='user-info'>
 
-                  <div class='user-title'>
+                  <div class='show-name'>
                     <h3 class='user-name'><%= user.nickname %></h3>
+                  </div>
+
+                  <div class='show-age'>
                     <div class='user-age'><%= user.age %>歳</div>
                   </div>
             

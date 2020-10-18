@@ -44,6 +44,7 @@
         </div>
 
         <div class="user-btn">
+        
           <% if current_user.id == @user[:id] %>
 
             <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
@@ -136,8 +137,6 @@
         </div>
 
     <% end %>
-
-    <%# <a href="#" class='another-user'><%= @userをもっと見る</a> %> 
 
   </div>
 </div>

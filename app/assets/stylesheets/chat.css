@@ -5,7 +5,7 @@
 }
 
 .side-bar {
-  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.952);
   width: 300px;
 }
 
@@ -23,7 +23,7 @@ overflow: auto;
 scroll-snap-type: mandatory;
 height: calc(100% - 220px);
 background-color: white;
-border-right: 1px gray solid;
+border-right: 1px lightgray solid;
 }
 
 .message-user {
@@ -68,4 +68,22 @@ border-right: 1px gray solid;
   height: 120px;
   text-align: center;
   background-color: lightgray;
+}
+
+.form-input {
+  padding: 20px;
+}
+
+.form-message {
+  width: 500px;
+  margin: 10px;
+}
+
+.form-image{
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.form-submit {
+
 }

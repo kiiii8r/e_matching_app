@@ -29,19 +29,18 @@
 
       <%= f.text_field :message, class: 'form-message', placeholder: 'type a message' %>
 
-      <label class="form-image">
-        <span class="image-file">画像</span>
+      <%= f.submit 'メッセージ送信', class: 'form-submit' %>
+
+      <div class="form-image">
+        <span class="image-file">画像添付：</span>
 
         <%= f.file_field :image, class: 'hidden' %>
-        
-      </label>
+  
+      </div>
 
       <%= f.hidden_field :partner_id, value: @partner.id %>
 
-      <%= f.submit '送信', class: 'form-submit' %>
-
      </div>
-
   </div>
 
 <% end %>

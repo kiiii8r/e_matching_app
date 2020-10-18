@@ -37,8 +37,8 @@
 
           <br>
 
-          <%= f.label :profile_language1_id_eq, '主用言語：' %>
-          <%= f.collection_select(:profile_language1_id_eq, Language1.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language1"}) %>
+          <%= f.label :profile_language_id_eq, '主用言語：' %>
+          <%= f.collection_select(:profile_language_id_eq, Language.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"language"}) %>
 
           <br>
 
@@ -97,7 +97,7 @@
                   <div class='detail-lists'>
                     <div class='detail-title'>
                       <div class='user-language'>主用言語</div>
-                      <%= user.profile.language1.name %>
+                      <%= user.profile.language.name %>
                     </div>
 
                     <div class='detail-title'>

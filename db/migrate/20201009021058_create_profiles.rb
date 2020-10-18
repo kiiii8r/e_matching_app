@@ -6,9 +6,7 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.text :introduction
       t.text :hobby
       t.text :target
-      t.references :language1
-      t.references :language2
-      t.references :language3
+      t.references :language
       t.text :other_language
       t.references :role
       t.text :pros

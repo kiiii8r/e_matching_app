@@ -29,7 +29,7 @@
         
           <%if @user.profile.image.present? %>
 
-            <%= image_tag @user.profile.image.variant(gravity: :center, resize:"350x350^", crop:"350x350+0+0"), class: "user-img" if @user.profile.image.attached? %>
+              <%= image_tag @user.profile.image.variant(gravity: :center, resize:"330x330^", crop:"330x330+0+0"), class: "user-img" if @user.profile.image.attached? %>
 
           <% elsif @user.gender == "male" %>
 
@@ -96,7 +96,7 @@
 
           <div class="detail-list">
             <div class="detail-name">主な使用言語</div>
-            <div class="detail-value"><%= @profile.language1.name %></div>
+            <div class="detail-value"><%= @profile.language.name %></div>
           </div>
 
           <div class="detail-list">

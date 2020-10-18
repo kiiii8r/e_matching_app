@@ -26,6 +26,11 @@
   border: 1px gray solid;
 }
 
+.user-show-img {
+  width: 35vw;
+  height: 47vh;
+}
+
 .user-btn {
   padding: 10px 0;
 }

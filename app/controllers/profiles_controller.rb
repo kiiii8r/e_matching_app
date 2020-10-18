@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:image, :prefecture_id, :introduction, :hobby, :target, :language1_id, :language2_id, :language3_id, :other_language, :role_id, :pros, :defect).merge(user_id: current_user.id)
+    params.require(:profile).permit(:image, :prefecture_id, :introduction, :hobby, :target, :language_id, :other_language, :role_id, :pros, :defect).merge(user_id: current_user.id)
   end
 
   def set_profile

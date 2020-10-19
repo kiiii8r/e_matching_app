@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
-  belongs_to_active_hash :language
   belongs_to_active_hash :role
 
   devise :database_authenticatable, :registerable,

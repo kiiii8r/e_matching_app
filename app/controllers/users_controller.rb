@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :search_user, only: [:index, :search]
+  before_action :authenticate_user!, only: [:index, :search, :show]
 
   def index
     @users = User.all.order('created_at DESC')

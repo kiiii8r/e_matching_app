@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
-  
+  before_action :authenticate_user!
+
   def create
     @partner = User.find(params[:partner_id])
     if @room = Room.create(room_params)

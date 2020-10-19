@@ -8,7 +8,7 @@
           <div class="message-contents">
             <%= message.message %>
           </div>
-            <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
+            <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
         </div>
       </div>
 
@@ -17,11 +17,11 @@
       <div class="partner-message">
         <div class="partner-image">
           <%if @partner.profile.image.present? %> 
-            <%= image_tag @partner.profile.image.variant(gravity: :center, resize:"50x50^", crop:"50x50+0+0"), class:"partner-img" if @partner.profile.image.attached? %>
+            <%= image_tag @partner.profile.image, class:"partner-img" if @partner.profile.image.attached? %>
           <% elsif @partner.gender == "male" %>
-            <%= image_tag 'mens_silhouette.png', size: "50x50", class: "user-img" %>
+            <%= image_tag 'mens_silhouette.png', class: "partner-img" %>
           <% else %>
-            <%= image_tag 'radies_silhouette.png', size: "50x50", class: "user-img" %>
+            <%= image_tag 'radies_silhouette.png', class: "partner-img" %>
           <% end %>
         </div>
 
@@ -29,7 +29,7 @@
           <div class="message-content">
             <%= message.message %>
           </div>
-          <%= image_tag message.image.variant(resize:'300x300'), class: 'message-image' if message.image.attached? %>
+          <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
         </div>
       </div>
 

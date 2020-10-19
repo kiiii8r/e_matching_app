@@ -14,6 +14,11 @@
   background-color: lightgray;
 }
 
+.message-image {
+  height: 60vh;
+  width: 100vh;
+}
+
 .message-view {
   width: calc(100% - 300px);
 }
@@ -53,7 +58,6 @@
 
 .partner-image {
   margin: 10px 18px;
-  border-radius: 50%;
 }
 
 .left-message {
@@ -62,6 +66,12 @@
   padding: 10px;
   border-radius: 5%;
   font-size: 20px;
+}
+
+.partner-img {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
 }
 
 .chat-footer {

@@ -6,7 +6,7 @@
       <div class="my-message">
         <div class="right-message">
           <div class="message-contents">
-             <div class="my-message-text"><%= message.message %></div>
+             <div class="message-text"><%= message.message %></div>
           </div>
             <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
         </div>
@@ -25,13 +25,18 @@
           <% end %>
         </div>
 
-        <div class="left-message">
-          <div class="message-content">
+        <div class="message-box">
+          <div class="left-message">
             <div class="message-text"><%= message.message %></div>
           </div>
-          <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
+          
+          <div class="left-image-box">
+            <%= image_tag message.image, class: 'left-image' if message.image.attached? %>
+          </div>
         </div>
       </div>
+
+      
 
     <% end %>
 

@@ -27,8 +27,8 @@
 }
 
 .user-show-img {
-  width: 50vh;
-  height: 50vh;
+  width: 22vw;
+  height: 22vw;
 }
 
 .user-btn {
@@ -54,12 +54,15 @@
 }
 
 .explain-box {
-
+  scroll-snap-align: start;
+  overflow: auto;
 }
 
 .explain-text {
   margin: 3px;
   font-size: 18px;
+  scroll-snap-type: mandatory;
+  height: 15vh;
 }
 
 .detail-contents  {
@@ -96,7 +99,7 @@
   text-align: center;
   width: 30vw;
   scroll-snap-type: mandatory;
-  height: 5vh;
+  height:3vw;
 }
 
 .option {

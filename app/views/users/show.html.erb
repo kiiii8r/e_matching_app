@@ -74,7 +74,9 @@
           <div class="user-explain">
             <div class="explain-title">自己紹介</div>
           </div>
-          <div class="explain-text"><%= @profile.introduction %></div>
+          <div class="explain-box">
+            <div class="explain-text"><%= @profile.introduction %></div>
+          </div>
         </div>
         
 
@@ -89,37 +91,51 @@
             
           <div class="detail-list">
             <div class="detail-name">住み：</div>
-            <div class="detail-value"><%= @profile.prefecture.name %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.prefecture.name %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">主な役割：</div>
-            <div class="detail-value"><%= @profile.role.name %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.role.name %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">使用言語：</div>
-            <div class="detail-value"><%= @profile.language %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.language %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">目標：</div>
-            <div class="detail-value"><%= @profile.target %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.target %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">趣味：</div>
-            <div class="detail-value"><%= @profile.hobby %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.hobby %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">長所：</div>
-            <div class="detail-value"><%= @profile.pros %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.pros %></div>
+            </div>
           </div>
 
           <div class="detail-list">
             <div class="detail-name">短所：</div>
-            <div class="detail-value"><%= @profile.defect %></div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.defect %></div>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@
   width: 88%;
   font-weight: 600;
   font-size: 80px;
-  padding-top: 150px;
+  padding-top: 200px;
   z-index: 100;
   opacity: 0;
   transition: 1s;
@@ -31,10 +31,10 @@
 
 .match-front {
   position: relative;
-  position: fixed;
   transition: 2s;
   z-index: 500;
   height: 500px;
+  padding-top: 30px;
 }
 
 .match-front:hover {

@@ -12,8 +12,10 @@
         <div class='search-lists'>
           <h3 class='search-name'>◆名前で検索</h3>
 
-          <%= f.label :nickname_cont, 'ユーザー名' %>
-          <%= f.text_field :nickname_cont %>
+          <div class='search-genre'>
+            <%= f.label :nickname_cont, 'ユーザー名' %>
+            <%= f.text_field :nickname_cont %>
+          </div>
 
           <div class='search-btn'>
             <%= f.submit '検索' %>
@@ -27,25 +29,25 @@
         <div class='search-lists'>
           <h3 class='search-name'>◆絞り込みで検索</h3>
 
-          <%= f.label :gender_eq, '性別：' %>
-          <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
+          <div class='search-genre'>
+            <%= f.label :gender_eq, '性別：' %>
+            <%= f.collection_select :gender_eq, @user_gender, :gender, :gender,  include_blank: '指定なし' %>
+          </div>
 
-          <br>
+          <div class='search-genre'>
+            <%= f.label :profile_role_id_eq, '役割：' %>
+            <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+          </div>
 
-          <%= f.label :profile_role_id_eq, '役割：' %>
-          <%= f.collection_select(:profile_role_id_eq, Role.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"role"}) %>
+          <div class='search-genre'>
+            <%= f.label :profile_language_cont, '使用言語' %>
+            <%= f.text_field :profile_language_cont %>
+          </div>
 
-          <br>
-
-          <%= f.label :profile_other_language_cont, '使用言語：' %>
-          <%= f.text_field :profile_other_language_cont %>
-
-          <br>
-
-          <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
-          <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
-
-          <br>
+          <div class='search-genre'>
+            <%= f.label :profile_prefecture_id_eq, '都道府県：' %>
+            <%= f.collection_select(:profile_prefecture_id_eq, Prefecture.all, :id, :name, { include_blank: '指定なし'  ,selected: nil }, {class:"select-box", id:"prefecture"}) %>
+          </div>
 
           <div class='search-btn'>
             <%= f.submit '検索' %>
@@ -109,7 +111,7 @@
                   <div class='list-lower'>
                     <div class='list-language'>
                       <div class='lower-list-title'><span class='lower-title'>使用言語</span></div>
-                      <%= user.profile.language.name %>
+                      <div class="language-content"><%= user.profile.language %></div>
                     </div>
                   </div>
     

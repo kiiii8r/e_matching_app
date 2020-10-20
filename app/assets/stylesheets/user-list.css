@@ -64,7 +64,15 @@
 }
 
 .user-info {
-  margin: 5px;;
+  margin: 5px;
+  scroll-snap-align: start;
+  overflow: auto;
+}
+
+.language-content {
+  width: 35vh;
+  scroll-snap-type: mandatory;
+  height: 5vh;
 }
 
 .list-upper {

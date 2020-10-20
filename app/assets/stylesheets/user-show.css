@@ -53,6 +53,10 @@
   border-bottom: 1px lightgray solid;
 }
 
+.explain-box {
+
+}
+
 .explain-text {
   margin: 3px;
   font-size: 18px;
@@ -82,10 +86,17 @@
   font-weight: 600;
 }
 
+.detail-box {
+  scroll-snap-align: start;
+  overflow: auto;
+}
+
 .detail-value {
-  display: inline-block;
+  display: block;
   text-align: center;
-  width: 75%;
+  width: 30vw;
+  scroll-snap-type: mandatory;
+  height: 5vh;
 }
 
 .option {

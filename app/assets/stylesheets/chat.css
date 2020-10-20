@@ -10,25 +10,26 @@
 }
 
 .chat-header {
-  height: 100px;
-  background-color: rgba(0, 0, 0, 0.952);
+  height: 50px;
+  background-color: gray;
+  color: white;
 }
 
 .message-image {
-  height: 60vh;
-  width: 100vh;
+  height: 20vw;
+  width: 30vw;
 }
 
 .message-view {
-  width: calc(100% - 300px);
+  width: calc(100% - 250px);
 }
 
 .messages {
   overflow: auto;
   scroll-snap-type: mandatory;
-  height: calc(100% - 220px);
-  background-color: white;
-  border-right: 1px lightgray solid;
+  height: calc(100% - 170px);
+  border-right: 1px gray solid;
+  background-color: whitesmoke;
 }
 
 .message-user {
@@ -42,14 +43,19 @@
 }
 
 .right-message {
-  background-color: whitesmoke;
+  background-color: lightgray;
   padding: 12px;
   border-radius: 5px;
   display: inline-block;
 }
 
 .message-contents {
-  font-size: 20px;
+  font-size: 20px
+}
+
+.message-text {
+  max-width: 30vw;
+  word-wrap: break-word;
 }
 
 .partner-message {
@@ -77,7 +83,7 @@
 .chat-footer {
   height: 120px;
   text-align: center;
-  background-color: lightgray;
+  background-color: gray;
 }
 
 .form-input {

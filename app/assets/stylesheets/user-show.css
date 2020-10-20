@@ -62,7 +62,7 @@
   margin: 3px;
   font-size: 18px;
   scroll-snap-type: mandatory;
-  height: 15vh;
+  height: 10vh;
 }
 
 .detail-contents  {
@@ -99,7 +99,7 @@
   text-align: center;
   width: 30vw;
   scroll-snap-type: mandatory;
-  height:3vw;
+  height: 3vw;
 }
 
 .option {

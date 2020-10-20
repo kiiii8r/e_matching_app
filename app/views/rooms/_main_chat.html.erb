@@ -1,6 +1,6 @@
 <div class="chat-header">
   <div class="left-header">
-    <div class="header-title">
+    <div class="header-partner">
 
       <%= @partner.nickname %>さん
 
@@ -9,8 +9,8 @@
 
   <div class="right-header">
     <div class="header-button">
-
-      <%= link_to "チャットを終了する", users_path() %>
+    
+      <%= link_to "チャットを終了する", user_path(@partner.id) %>
 
     </div>
   </div>

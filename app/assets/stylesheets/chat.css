@@ -4,15 +4,69 @@
   display: flex;
 }
 
-.side-bar {
+.left-side-bar {
   background-color: rgba(0, 0, 0, 0.952);
-  width: 300px;
+  width: 10%;
+}
+
+.left-side {
+  color: white;
+  font-weight: bolder;
+  font-size: 100px;
+  height: 100%;
+  position: relative;
+  top: 35%;
+  right: 190%;
+}
+
+.left-text {
+  transform: rotate(-90deg);
+position: absolute;
+}
+
+.right-side-bar {
+  background-color: rgba(0, 0, 0, 0.952);
+  width: 10%;
+}
+
+.right-side {
+  color: white;
+  font-weight: bolder;
+  font-size: 100px;
+  height: 100%;
+  position: relative;
+  bottom: -35%;
+  left: -180%;
+}
+
+.right-text {
+  transform: rotate(90deg);
+  position: absolute;
 }
 
 .chat-header {
   height: 50px;
-  background-color: gray;
+  background-color: rgb(179, 179, 179);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-partner {
+  margin: 12px 0 0 40px;
   color: white;
+  font-size: large;
+}
+
+.right-header {
+  margin: 15px 40px 15px 0;
+}
+
+.header-button a {
+  color: white;
+}
+
+.header-button a:hover {
+  color: blue;
 }
 
 .message-image {
@@ -21,14 +75,16 @@
 }
 
 .message-view {
-  width: calc(100% - 250px);
+  width: 80%;
+  z-index: 5;
 }
 
 .messages {
   overflow: auto;
   scroll-snap-type: mandatory;
   height: calc(100% - 170px);
-  border-right: 1px gray solid;
+  border-left: 10px lightblue solid;
+  border-right: 10px lightblue solid;
   background-color: whitesmoke;
 }
 
@@ -37,25 +93,29 @@
 }
 
 .my-message { 
-  padding: 10px;
+  padding: 15px 17px;
   text-align: right;
   justify-content: right;
 }
 
 .right-message {
   background-color: lightgray;
-  padding: 12px;
+  padding: 12px 20px;
   border-radius: 5px;
   display: inline-block;
 }
 
 .message-contents {
-  font-size: 20px
+  font-size: 20px;
 }
 
 .message-text {
   max-width: 30vw;
   word-wrap: break-word;
+   background-color: rgb(195, 226, 240);
+   margin: 30px 0 10px 6px;
+   padding: 10px 20px;
+   border-radius: 5%;
 }
 
 .partner-message {
@@ -67,23 +127,20 @@
 }
 
 .left-message {
-  background-color: rgb(195, 226, 240);
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5%;
   font-size: 20px;
+  display: block;
 }
 
 .partner-img {
-  height: 10vh;
-  width: 10vh;
+  height: 5vw;
+  width: 5vw;
   border-radius: 50%;
 }
 
 .chat-footer {
   height: 120px;
   text-align: center;
-  background-color: gray;
+  background-color: rgb(179, 179, 179);
 }
 
 .form-input {
@@ -91,7 +148,7 @@
 }
 
 .form-message {
-  width: 500px;
+  width: 37vw;
   margin: 10px;
 }
 

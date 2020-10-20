@@ -125,5 +125,12 @@
 .footer-logo {
   text-align: center;
   margin: 30px 30px 0 30px;
+}
 
+.fixed {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 1000;
 }

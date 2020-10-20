@@ -8,6 +8,7 @@ require("@rails/activestorage").start();
 require("channels");
 require("../calculation_age");
 require("../scroll_end");
+require("../scroll_rock");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

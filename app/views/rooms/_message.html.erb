@@ -1,4 +1,4 @@
-<div class="message", id="scroll_end">
+<div class="message">
   <div class="message-user">
 
     <% if message.user_id == @user.id %>
@@ -6,7 +6,7 @@
       <div class="my-message">
         <div class="right-message">
           <div class="message-contents">
-             <div class="message-text"><%= message.message %></div>
+              <div class="message-text"><%= message.message %></div>
           </div>
             <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
         </div>

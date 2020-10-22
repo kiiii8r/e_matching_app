@@ -1,0 +1,119 @@
+.user-show-name {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.user-name-box {
+  background-color: lightgray;
+  border: 1px gray solid;
+}
+
+.user-show {
+  display: flex;
+  text-align: center;
+  height: 600px;
+  justify-content: space-around;
+}
+
+.user-box {
+  width: 40%;
+  margin: 20px;
+}
+
+.user-img-content {
+  padding: 10px;
+  background-color: white;
+  border: 1px gray solid;
+}
+
+.user-show-img {
+  width: 22vw;
+  height: 22vw;
+}
+
+.user-btn {
+  padding: 10px 0;
+}
+
+.user-show-btn {
+  color: black;
+  background-color: white;
+  padding: 5px 20px;
+  border: 1px gray solid;
+} 
+
+.user-explain {
+  font-weight: bold;
+  font-size: large;
+}
+
+.explain-title {
+  display: inline-block;
+  padding: 0 13px;
+  border-bottom: 1px lightgray solid;
+}
+
+.explain-box {
+  scroll-snap-align: start;
+  overflow: auto;
+}
+
+.explain-text {
+  margin: 3px;
+  font-size: 18px;
+  scroll-snap-type: mandatory;
+  height: 10vh;
+}
+
+.detail-contents  {
+  align-items: center;
+  padding-top: 30px;
+}
+
+.user-detail {
+  height: 100%;
+  width: 45%;
+}
+
+.detail-list {
+  display: flex;
+  padding: 25px 13px 0 13px;
+  font-size: 18px;
+  border-bottom: 1px lightgray solid; 
+}
+
+.detail-name {
+  display: inline-block;
+  width: 25%;
+  text-align: right ;
+  font-weight: 600;
+}
+
+.detail-box {
+  scroll-snap-align: start;
+  overflow: auto;
+}
+
+.detail-value {
+  display: block;
+  text-align: center;
+  width: 30vw;
+  scroll-snap-type: mandatory;
+  height: 3vw;
+}
+
+.option {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.report-btn {
+  color: red;
+  font-size: large;
+  margin: 20px;
+}
+
+.user-show-btn {
+  padding: 7px 30px;
+  margin: 20px;
+}

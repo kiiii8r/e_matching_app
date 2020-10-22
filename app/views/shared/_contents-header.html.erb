@@ -1,24 +1,37 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
-<header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='キーワードから探す'>
-      <button class="search-button">
-      </button>
-    </form>
-  </div>
+<header>
   <div class='nav'>
-    <ul class='lists-left'>
-    <ul>
-    </ul>
-    <ul class='lists-right'>
-      
-      <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
+    <div class='nav-upper'>
+      <ul class='lists-upper'>
+        <li><a class="top-logo" href="#">●</a></li>
+        <li><a class="top-first" href="#">1</a></li> 
+        <li><a class="top-second" href="#">2</a></li>
+        <li><a class="top-third" href="#">3</a></li> 
+        <li><a class="top-fourth" href="#">4</a></li>
+        <li><a class="top-fifth" href="#">5</a></li> 
+        <li><a class="top-sixth" href="#">6</a></li>
+        <li><a class="top-seventh" href="#">7</a></li>
+        <li><a class="top-search" href="#">🔍</a></li>
+        <li><a class="top-second-logo" href="#">⬜️</a></li> 
+      </ul>
+    </div>
+    <div class='nav-lower-lock' id='nav-lower' >
+      <div class='nav-lower'>
+        <div class='lower-contents'>
+          <div class='header-title'>eMatch Pro</div>
+            <ul class='lists-lower'>
 
-      <li><%= link_to 'Users page', users_path, class: "users-link" %></li>
+              <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
+
+              <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id), class: "point-font" %></li>
+
     
-    </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

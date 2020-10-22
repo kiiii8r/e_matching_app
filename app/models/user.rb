@@ -1,11 +1,8 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :prefecture
-  belongs_to_active_hash :language1
-  belongs_to_active_hash :language2
-  belongs_to_active_hash :language3
   belongs_to_active_hash :role
-  
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -20,7 +17,6 @@ class User < ApplicationRecord
     validates :gender
     validates :age
   end
-
 
   validates :password, format: { with: /\A[a-z0-9]+\z/i, message: 'Include both letters and numbers' }, allow_nil: true
 

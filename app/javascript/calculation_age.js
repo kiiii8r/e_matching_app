@@ -3,6 +3,7 @@ function calculation_age() {
   const birthMonth = document.getElementById("user_birth_day_2i");
   const birthDay = document.getElementById("user_birth_day_3i");
   const resultAge = document.getElementById("result-age");
+  const resultSet = document.getElementById("result-set");
 
   window.addEventListener("mouseover", () => {
     calculation();
@@ -15,8 +16,10 @@ function calculation_age() {
       const date = ( today.getFullYear() * 10000 ) + (( today.getMonth() + 1 ) * 100 ) + today.getDate() ;
       const age = ( Math.floor(( date - birthday ) / 10000 ));
       resultAge.textContent = age;
+      resultSet.textContent = age;
     } else {
       resultAge.textContent = '';
+      resultSet.textContent = '';
     };
   };
 };

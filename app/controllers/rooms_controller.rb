@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!
 
   def create
     @partner = User.find(params[:partner_id])
@@ -20,6 +21,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(user_ids:[])
+    params.require(:room).permit(user_ids: [])
   end
 end

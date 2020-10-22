@@ -1,121 +1,157 @@
 <%= render "shared/contents-header" %>
 
-<div class="user-show">
-  <div class="user-box">
-    <h2 class="name">
-      <%= @user.nickname %>
-    </h2>
-    <div class='user-img-content'>
-      <%= image_tag @profile.image.variant(resize:'500x500'), class:"user-img" if @profile.image.attached? %>
-    
-    </div>
-    <div class="user-name-box">
-      <span class="user-name"></span>
-        <%= @user.nickname %>さん
-    </div>
+<div class ='main-contents'>
+
+  <div class="user-show-name">
 
     <% if current_user.id == @user[:id] %>
 
-    <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-red-btn" %>
-    <p class='or-text'>or</p>
-
-    <% elsif @room_number.blank? %>
-
-      <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
-
-      <%= f.submit "初期メッセージ", class: 'chat-room-form__action-btn'%>
-
-      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
-      <input name="room[user_ids][]" type="hidden" value=<%= @user.id %>>
-      <input name="partner_id[]" type="hidden" value=<%= @user.id %>>
-
-      <% end %>
+      <h1>My page</h1>
 
     <% else %>
 
-      <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ) %>
+      <h1>User page</h1>
 
     <% end %>
 
-
-    <div class="user-explain-box">
-      <span><%= @profile.introduction %></span>
     </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-user">年齢</th>
-          <td class="detail-value"><%= @user.age %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">住み</th>
-          <td class="detail-value"><%= @profile.prefecture.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">主な役割</th>
-          <td class="detail-value"><%= @profile.role.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">主な使用言語1</th>
-          <td class="detail-value"><%= @profile.language1.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">主な使用言語2</th>
-          <td class="detail-value"><%= @profile.language2.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">主な使用言語3</th>
-          <td class="detail-value"><%= @profile.language3.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">その他使用言語</th>
-          <td class="detail-value"><%= @profile.other_language %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">目標</th>
-          <td class="detail-value"><%= @profile.target %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">趣味</th>
-          <td class="detail-value"><%= @profile.hobby %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">長所</th>
-          <td class="detail-value"><%= @profile.pros %></td>
-        </tr>
-        <tr>
-          <th class="detail-user">短所</th>
-          <td class="detail-value"><%= @profile.defect %></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="option">
-      <div class="favorite-btn">
-        <%# <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%> %>
-        <span>お気に入り 0</span>
+
+    <div class="user-show">
+      <div class="user-box">
+
+        <div class="user-name-box">
+
+            <h2><%= @user.nickname %>さん</h2>
+
+        </div>
+
+        <div class='user-img-content'>
+        
+          <%if @user.profile.image.present? %>
+
+              <%= image_tag @user.profile.image, class: "user-show-img" if @user.profile.image.attached? %>
+
+          <% elsif @user.gender == "male" %>
+
+            <%= image_tag 'mens_silhouette.png', size: "400x400", class: "user-show-img" %>
+
+          <% else %>
+
+            <%= image_tag 'radies_silhouette.png', size: "400x400", class: "user-show-img" %>
+
+          <% end %>
+      
+        </div>
+
+        <div class="user-btn">
+
+          <% if current_user.id == @user[:id] %>
+
+            <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+
+          <% elsif @room_number.blank? %>
+
+            <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
+
+              <%= f.submit "チャットルームへ", class: 'user-show-btn'%>
+
+              <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+              <input name="room[user_ids][]" type="hidden" value=<%= @user.id %>>
+
+              <input name="partner_id[]" type="hidden" value=<%= @user.id %>>
+
+            <% end %>
+
+          <% else %>
+
+            <%= link_to 'チャットルームへ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+
+          <% end %>
+        </div>
+
+        <div class="user-explain-box">
+          <div class="user-explain">
+            <div class="explain-title">自己紹介</div>
+          </div>
+          <div class="explain-box">
+            <div class="explain-text"><%= @profile.introduction %></div>
+          </div>
+        </div>
+        
+
       </div>
-      <div class="report-btn">
-        <%# <%= image_tag "flag.png" ,class:"report-flag-icon" ,width:"20",height:"20"%> %>
-        <span>通報</span>
+      
+      <div class="user-detail">
+        <div class="detail-contents">
+          <div class="detail-list">
+            <div class="detail-name">年齢：</div>
+            <div class="detail-value"><%= @user.age %></div>
+          </div>
+            
+          <div class="detail-list">
+            <div class="detail-name">住み：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.prefecture.name %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">主な役割：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.role.name %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">使用言語：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.language %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">目標：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.target %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">趣味：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.hobby %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">長所：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.pros %></div>
+            </div>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-name">短所：</div>
+            <div class="detail-box">
+              <div class="detail-value"><%= @profile.defect %></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
   
-  <% if current_user.id != @user[:id] %>
-  
-  <div class="links">
-    <a href="#" class="change-user-btn">
-      ＜ 前の人
-    </a>
-    <a href="#" class="change-user-btn">
-      次の人 ＞
-    </a>
+    <% if current_user.id != @user[:id] %>
+
+      <div class="option">
+          <div class="report-btn">
+            <span>- 通報 -</span>
+          </div>
+        </div>
+
+    <% end %>
+
   </div>
-
- <% end %>
-
-  <%# <a href="#" class='another-user'><%= @userをもっと見る</a> %> %>
 </div>
 
 <%= render "shared/contents-footer" %>

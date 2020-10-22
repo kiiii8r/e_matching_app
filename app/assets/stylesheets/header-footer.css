@@ -1,0 +1,136 @@
+/* header css */
+
+.nav-upper {
+  background-color: rgba(0, 0, 0, 0.952);
+  height: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-upper ul {
+  height: 45px;
+  justify-content: space-between;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  width: 1025px;
+}
+
+.lists-upper a {
+  color: lightgray;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+.lists-upper a:hover {
+  color: white;
+}
+
+.nav-lower-lock {
+  width: 100%;
+  position: absolute;
+}
+
+.nav-lower {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.lower-contents  {
+  display: flex;
+
+  justify-content: space-between;
+  width: 1025px;
+}
+
+.header-title {
+  font-weight:  bold;
+  font-size: large;
+  padding: 10px;
+}
+
+.lists-lower   {
+  display: flex;
+  align-items: center;
+}
+
+.lists-lower a { 
+  padding: 0 10px;
+  font-size: 11px;
+}
+
+.header-link {
+  color: black;
+}
+
+.header-link:hover {
+  color: rgb(38, 102, 221);
+}
+
+.blue-point {
+  background-color: rgb(39, 99, 211);
+  border-radius: 50px;
+  padding: 2px;
+}
+
+.blue-point:hover {
+  background-color: rgb(59, 113, 212);
+}
+
+.point-font {
+  padding: 10px;
+  color: white;
+}
+
+.main-contents {
+  background-color: whitesmoke;
+}
+
+/* footer css */
+
+.footer {
+  z-index: 999;
+  background-color: white;
+  height:450px;
+}
+
+.footer-contents {
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+.main-text {
+  font-size: 33px;
+  font-weight: 900;
+  width: 900px;
+  color: gray;
+}
+
+.text-black {
+  color: black;
+}
+
+.match-details {
+  margin-top: 100px;
+  padding-top: 50px;
+  border-top: 1px gray solid;
+}
+
+.footer-link {
+  color: gray;
+}
+
+.footer-logo {
+  text-align: center;
+  margin: 30px 30px 0 30px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 1000;
+}

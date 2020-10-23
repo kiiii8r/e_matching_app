@@ -1,5 +1,5 @@
 class Like < ApplicationRecord
   belongs_to :user
-  has_many :notifications, dependent: :destroy
+  has_many :notifications
 
 end

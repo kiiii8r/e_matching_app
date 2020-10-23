@@ -220,7 +220,7 @@ pass: aaa123
 | Column            | Type       | Options                                            |
 | ----------------- | ---------- | -------------------------------------------------- |
 | id                | integer    |                                                    |
-| user_id           | integer    | uniqueness: true, foreign_key: true, null: false   |
+| user_id           | references | uniqueness: true, foreign_key: true, null: false   |
 | prefecture_id     | references |                                                    |
 | introduction      | text       |                                                    |
 | hobby             | text       |                                                    |
@@ -281,8 +281,8 @@ pass: aaa123
 | Column     | Type       | Options        |
 | ---------- | ---------- | -------------- |
 | id         | integer    | null: false    |
-| user_id    | references | null: false    |
-| pushed_id  | references | null: false    |
+| user_id    | integer    | null: false    |
+| pushed_id  | integer    | null: false    |
 
 ### Association
 

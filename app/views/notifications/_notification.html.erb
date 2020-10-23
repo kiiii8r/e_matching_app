@@ -1,10 +1,25 @@
 <div class="user-view clearfix ">
-  <%= link_to users_user_path(notification.visiter) do %>
-    <%= attachment_image_tag visiter, :profile_image, :fill,100,100, format: "jpeg", fallback: "no_image.jpg", size: "50x50", class:"profile-img-circle" %>
+
+  <% visiter_user(notification) %>
+
+  <%= link_to user_path(notification.visiter) do %>
+     <div class="visiter-image">
+        <%if @visiter.profile.image.present? %> 
+          <%= image_tag @visiter.profile.image, class:"visiter-img" if @visiter.profile.image.attached? %>
+        <% elsif @visiter.gender == "male" %>
+          <%= image_tag 'mens_silhouette.png', class: "visiter-img" %>
+        <% else %>
+          <%= image_tag 'radies_silhouette.png', class: "visiter-img" %>
+        <% end %>
+      </div>
   <% end %>
-  <%= notification_form(notification) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} 前)" %></span>
+  
+  <%= notification_form(notification, @visiter) %><span class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} 前)" %></span>
   <br>
-  <% if !@comment.nil? %>
-    <p class="moderate-font text-center" style="color: #C0C0C0;"><%= @comment %></p>
+  <% if notification.message.nil? %>
+    <p class="moderate-font text-center" style="color: #C0C0C0;"><%= notification.message %></p>
+  <% end %>
+  <% if notification.message.image.nil? %>
+    <p class="moderate-font text-center" style="color: #C0C0C0;"><%=image_tag notification.message.image %></p>
   <% end %>
 </div>

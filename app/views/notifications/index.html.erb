@@ -15,19 +15,19 @@
       
     <hr>
 
+  <% if @notifications.present? %>
 
+      <div class="users-index">
+            
+        <%= render partial: "notification", collection: @notifications %>
+        
+      </div>
 
-    <div class="users-index">
-          
-      <%= render "notification", @notification: :notification %>
-      
-    </div>
-
-
+  <% else %>
 
       <p>通知はありません</p>
 
-  
+  <% end %>
 
 </div>
 

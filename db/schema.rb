@@ -52,14 +52,15 @@ ActiveRecord::Schema.define(version: 2020_10_23_053024) do
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.integer "visiter"
-    t.integer "visited"
     t.bigint "like_id"
     t.bigint "message_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["like_id"], name: "index_notifications_on_like_id"
     t.index ["message_id"], name: "index_notifications_on_message_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -119,6 +120,7 @@ ActiveRecord::Schema.define(version: 2020_10_23_053024) do
   add_foreign_key "messages", "users"
   add_foreign_key "notifications", "likes"
   add_foreign_key "notifications", "messages"
+  add_foreign_key "notifications", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "room_users", "rooms"
   add_foreign_key "room_users", "users"

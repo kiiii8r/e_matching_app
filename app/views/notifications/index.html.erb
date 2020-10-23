@@ -3,32 +3,35 @@
 
 
 <div class='main-contents'>
-  <h3 class="text-center">通知</h3>
+  <div class='notice-page'>
+    <h3 class="text-center">通知</h3>
 
-  <%= link_to "#", method: :delete do %>
-
-    <div class="fas fa-trash" style="color: black;"></div>
+    <%= link_to "#", method: :delete do %>
 
     <p style="color: black;">全削除</p>
-      
-  <% end %>
-      
-    <hr>
-
-  <% if @notifications.present? %>
-
-      <div class="users-index">
-            
-        <%= render partial: "notification", collection: @notifications %>
         
-      </div>
+    <% end %>
+        
+      <hr>
 
-  <% else %>
+    <div class="notice-content">
 
-      <p>通知はありません</p>
+      <% if @notifications.present? %>
 
-  <% end %>
+          <div class="users-index">
+                
+            <%= render partial: "notification", collection: @notifications %>
+            
+          </div>
 
+      <% else %>
+
+          <p>通知はありません</p>
+
+      <% end %>
+
+    </div>
+  </div>
 </div>
 
 

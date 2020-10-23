@@ -1,0 +1,24 @@
+.notice-page {
+  width: 70%;
+  text-align: center;
+  margin-left: calc((100% - 70%)/2);
+  margin-top: 20px;
+}
+
+.notice-list {
+  display: flex;
+  justify-content: center;
+  border: 1px gray solid;
+  padding:10px;
+
+}
+
+.visiter-img {
+  height: 10vw;
+  width: 10vw;
+}
+
+.notice-image {
+  max-height: 8vw;
+  max-width: 8vw
+}

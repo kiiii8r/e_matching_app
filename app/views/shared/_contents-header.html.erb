@@ -23,9 +23,11 @@
 
               <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
+              <li><%= link_to 'Notice', user_notifications_path(current_user.id), class: "header-link" %></li>
+
               <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
 
-              <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id), class: "point-font" %></li>
+              <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id) , class: "point-font" %> <span class="header-my-link">: My page</span></li>
 
     
             </ul>

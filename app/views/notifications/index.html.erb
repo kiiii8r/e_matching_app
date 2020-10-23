@@ -1,0 +1,35 @@
+<%= render "shared/contents-header" %>
+
+
+
+<div class='main-contents'>
+  <h3 class="text-center">通知</h3>
+
+  <%= link_to "#", method: :delete do %>
+
+    <div class="fas fa-trash" style="color: black;"></div>
+
+    <p style="color: black;">全削除</p>
+      
+  <% end %>
+      
+    <hr>
+
+
+
+    <div class="users-index">
+          
+      <%= render "notification" %>
+      
+    </div>
+
+
+
+      <p>通知はありません</p>
+
+  
+
+</div>
+
+
+<%= render "shared/contents-footer" %>

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :profiles, only: [:new, :create, :edit, :update]
     resources :likes, only: :create
-    resources :notifications, only: [:index, :create]
+    resources :notifications, only: [:index, :create, :delete]
   end
   resources :rooms, only: [:create, :show] do
     resources :messages, only: :create

@@ -237,11 +237,11 @@ pass: aaa123
 
 ## Room_users テーブル
 
-| Column  | Type       | Options     |
-| ------- | ---------- | ----------- |
-| id      | integer    | null: false |
-| room_id | integer    | null: false |
-| user_id | integer    | null: false |
+| Column  | Type       | Options           |
+| ------- | ---------- | ----------------- |
+| id      | integer    | null: false       |
+| room_id | references | foreign_key: true |
+| user_id | references | foreign_key: true |
 
 ### Association
 
@@ -251,12 +251,12 @@ pass: aaa123
 
 ## Messages テーブル
 
-| Column        | Type       | Options      |
-| ------------- | ---------- | ------------ |
-| id            | integer    | null: false  |
-| room_id       | integer    | null: false  |
-| user_id       | integer    | null: false  |
-| message       | text       | null: false  |
+| Column        | Type       | Options            |
+| ------------- | ---------- | ------------------ |
+| id            | integer    | null: false        |
+| room_id       | references | foreign_key: true  |
+| user_id       | references | foreign_key: true  |
+| message       | text       | null: false        |
 
 ### Association
 

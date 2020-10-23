@@ -278,11 +278,11 @@ pass: aaa123
 
 ## Likes テーブル
 
-| Column     | Type       | Options        |
-| ---------- | ---------- | -------------- |
-| id         | integer    | null: false    |
-| user_id    | integer    | null: false    |
-| pushed_id  | integer    | null: false    |
+| Column     | Type       | Options                            |
+| ---------- | ---------- | ---------------------------------- |
+| id         | integer    | null: false                        |
+| user_id    | references | null: false, foreign_key: true     |
+| pushed_id  | references | null: false, foreign_key: true     |
 
 ### Association
 
@@ -291,13 +291,13 @@ pass: aaa123
 
 ## Notificationsテーブル
 
-| Column        | Type       | Options        |
-| ------------- | ---------- | -------------- |
-| id            | integer    | null: false    |
-| visiter_id    | integer    | optional: true |
-| visited_id    | integer    | optional: true |
-| like_id       | integer    | optional: true |
-| message_id    | integer    | optional: true |
+| Column        | Type       | Options                           |
+| ------------- | ---------- | --------------------------------- |
+| id            | integer    | null: false                       |
+| visiter_id    | references | optional: true, foreign_key: true |
+| visited_id    | references | optional: true, foreign_key: true |
+| like_id       | references | optional: true, foreign_key: true |
+| message_id    | references | optional: true, foreign_key: true |
 
 ### Association
 

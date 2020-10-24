@@ -67,6 +67,10 @@
 
             <%= link_to 'チャットルームへ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
 
+            <%= render ‘relationships/follow_button’, user: @user %>
+
+            <%= relatio%>
+
           <% end %>
         </div>
 

@@ -5,6 +5,15 @@ class NotificationsController < ApplicationController
 
   def create
   end
+  
+  def destroy
+    @notifications = Notification.where(user_id: current_user.id)
+    if @notifications.destroy_all
+      redirect_to users_path
+    else
+      redirect :index
+    end
+  end
 
   private
 

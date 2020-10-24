@@ -4,9 +4,9 @@
   <div class='notice-page'>
     <h3 class="text-center">通知</h3>
 
-    <%= link_to "#", method: :delete do %>
+    <%= link_to notification_path(@notifications), method: :delete do %>
 
-    <p style="color: black;">全削除</p>
+      <p style="color: black;">全削除</p>
         
     <% end %>
         

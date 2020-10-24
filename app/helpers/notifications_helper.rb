@@ -13,4 +13,8 @@ module NotificationsHelper
     end
   end
 
+  def notice_count
+    @notice_count = Notification.where(user_id: current_user.id).count
+  end
+
 end

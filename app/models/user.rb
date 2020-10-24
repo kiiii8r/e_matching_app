@@ -13,8 +13,9 @@ class User < ApplicationRecord
   has_many :likes
   has_many :notifications
 
+  validates :nickname, presence: true, length: { maximum: 8 } 
+
   with_options presence: true do
-    validates :nickname
     validates :birth_day
     validates :gender
     validates :age

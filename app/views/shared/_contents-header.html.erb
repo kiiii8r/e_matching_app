@@ -26,7 +26,15 @@
 
               <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
-              <li><span class="notice_count"><%= @notice_count %></span><%= link_to 'Notice', notifications_path(current_user.id), class: "header-link" %></li>
+              <li>
+
+              <% if @notice_count != 0 %>
+              
+              <span class="notice_count"><%= @notice_count %></span>
+
+              <% end %>
+              
+              <%= link_to 'Notice', notifications_path(current_user.id), class: "header-link" %></li>
           
               <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
 

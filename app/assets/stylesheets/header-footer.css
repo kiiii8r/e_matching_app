@@ -36,11 +36,11 @@
   height: 50px;
   display: flex;
   justify-content: center;
+  opacity: 0.9;
 }
 
 .lower-contents  {
   display: flex;
-
   justify-content: space-between;
   width: 1025px;
 }

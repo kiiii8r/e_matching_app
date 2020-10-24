@@ -26,15 +26,23 @@
 
               <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
-              <li>
+              <li class="header-notice">
 
-              <% if @notice_count != 0 %>
+              <% if @notice_count >= 100 %>
               
+              <div class="notice-box">
+              <span class="notice_maxcount"><%= "99+" %></span>
+              </div>
+
+              <% elsif @notice_count != 0 %>
+
+               <div class="notice-box">
               <span class="notice_count"><%= @notice_count %></span>
+              </div>
 
               <% end %>
               
-              <%= link_to 'Notice', notifications_path(current_user.id), class: "header-link" %></li>
+              <%= link_to 'Notice', notifications_path(current_user.id), class: "header-notice" %></li>
           
               <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
 

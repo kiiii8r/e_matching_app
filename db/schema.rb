@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_10_060834) do
+ActiveRecord::Schema.define(version: 2020_10_24_155226) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 2020_10_10_060834) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "visiter"
+    t.bigint "relationship_id"
+    t.bigint "message_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["message_id"], name: "index_notifications_on_message_id"
+    t.index ["relationship_id"], name: "index_notifications_on_relationship_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "prefecture_id"
@@ -58,6 +70,16 @@ ActiveRecord::Schema.define(version: 2020_10_10_060834) do
     t.index ["prefecture_id"], name: "index_profiles_on_prefecture_id"
     t.index ["role_id"], name: "index_profiles_on_role_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "follow_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["follow_id"], name: "index_relationships_on_follow_id"
+    t.index ["user_id", "follow_id"], name: "index_relationships_on_user_id_and_follow_id", unique: true
+    t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 
   create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -97,7 +119,12 @@ ActiveRecord::Schema.define(version: 2020_10_10_060834) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "notifications", "messages"
+  add_foreign_key "notifications", "relationships"
+  add_foreign_key "notifications", "users"
   add_foreign_key "profiles", "users"
+  add_foreign_key "relationships", "users"
+  add_foreign_key "relationships", "users", column: "follow_id"
   add_foreign_key "room_users", "rooms"
   add_foreign_key "room_users", "users"
 end

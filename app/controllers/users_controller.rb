@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @profile = Profile.find(params[:id])
+    @follow = Relationship.new
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)
   end
 

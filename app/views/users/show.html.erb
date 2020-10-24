@@ -63,13 +63,13 @@
 
             <% end %>
 
+             <%= render "relationships/follow_button", user: @user %>
+
           <% else %>
 
             <%= link_to 'チャットルームへ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
 
-            <%= render ‘relationships/follow_button’, user: @user %>
-
-            <%= relatio%>
+            <%= render "relationships/follow_button", user: @user %>
 
           <% end %>
         </div>

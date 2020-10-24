@@ -101,7 +101,9 @@
 .header-my-link {
   color: white;
   font-size: 10px;
-  padding: 5px;
+  padding: 3px 5px 0 0;
+  margin-bottom: 3px;
+  display: inline-block;
 }
 
 .header-link:hover {
@@ -120,7 +122,8 @@
 
 .point-font {
   color: white;
-  margin-left: 5px;
+  margin-right: -10px;
+  display: inline-block;
 }
 
 .main-contents {

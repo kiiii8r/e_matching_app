@@ -1,8 +1,7 @@
 .notice-page {
   width: 70%;
   text-align: center;
-  margin-left: calc((100% - 70%)/2);
-  margin-top: 20px;
+  margin: 30px calc((100% - 70%)/2) ;
 }
 
 .notice-list {

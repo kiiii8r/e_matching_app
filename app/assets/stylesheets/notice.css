@@ -8,9 +8,24 @@
 .notice-list {
   display: flex;
   justify-content: center;
-  border: 1px gray solid;
-  padding:10px;
+}
 
+.notice-block {
+ display: flex;
+ padding: 10px 50px 10px 50px;
+ border-bottom: 1px gray solid;
+}
+
+.notice-right {
+ margin-left: 30px;
+ width: 30vw;
+}
+
+.new-message {
+  overflow: auto;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: start;
+  height: 6vw;
 }
 
 .visiter-img {
@@ -20,5 +35,5 @@
 
 .notice-image {
   max-height: 8vw;
-  max-width: 8vw
+  max-width: 8vw;
 }

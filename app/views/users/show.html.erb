@@ -21,11 +21,15 @@
 
         <div class="user-name-box">
 
-            <h2><%= @user.nickname %>さん</h2>
+            <h2><%= @user.nickname %>さん
 
             <%if @relationship.present? %>
+
             <p class="follow-value">(フォロー中)</p>
+
             <%end%>
+
+            </h2>
 
         </div>
 

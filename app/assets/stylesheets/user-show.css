@@ -8,6 +8,11 @@
   border: 1px gray solid;
 }
 
+.follow-value {
+  display: inline-block;
+  font-size: 15px;
+}
+
 .user-show {
   display: flex;
   text-align: center;

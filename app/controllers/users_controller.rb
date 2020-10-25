@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all.order('created_at DESC')
     set_user_column
-
+    @relationships = Relationship.where(user_id: current_user.id)
     @search = User.search(params[:q])
     @users = @search.result
   end

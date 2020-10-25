@@ -29,11 +29,12 @@
 
       <% if notification.message_id.present? %>
 
-       <div class="notice-relation">
-      
-        <%= notification_form(notification, @visiter) %>
+       <div class="notice-content">
+        
+          <%= notification_form(notification, @visiter) %>
 
-        <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
+          <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
+        </div>
 
         <br>
 

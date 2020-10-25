@@ -1,7 +1,9 @@
 class RelationshipsController < ApplicationController
 
   def create
-    if Relationship.create(user_set)
+    @relationship = Relationship.new(user_set)
+    if @relationship.save!
+      Notification.create!(notice_params)
       flash[:success] = 'ユーザーをフォローしました'
       redirect_to user_path(params[:follow_id])
     else
@@ -24,5 +26,9 @@ class RelationshipsController < ApplicationController
   private
   def user_set
     params.permit(:follow_id).merge(user_id: current_user.id)
+  end
+
+  def notice_params
+    params.permit.merge(user_id: params[:follow_id], visiter: current_user.id, relationship_id: @relationship.id)
   end
 end

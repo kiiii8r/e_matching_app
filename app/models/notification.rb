@@ -4,5 +4,4 @@ class Notification < ApplicationRecord
   belongs_to :user
   belongs_to :relationship, optional: true
   belongs_to :message, optional: true
-  has_many :notifications
 end

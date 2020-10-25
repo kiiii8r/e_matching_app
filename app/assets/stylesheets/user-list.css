@@ -22,6 +22,17 @@
   text-align: right;
 }
 
+.follow-title {
+  text-align: center;
+}
+
+.follow-list {
+  border-top: 1px gray solid;
+  border-bottom: 1px gray solid;
+  height: 15vw;
+  background-color: whitesmoke;
+}
+
 .main {
   display: flex;
 }

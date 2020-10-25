@@ -6,7 +6,7 @@
 
       <%= f.hidden_field :follow_id, value: user.id %>
 
-      <%= f.submit 'フォロー解除' %>
+      <%= f.submit 'フォロー解除', class: "follow-input" %>
 
     <% end %>
 
@@ -16,7 +16,7 @@
 
       <%= f.hidden_field :follow_id, value: user.id %>
 
-      <%= f.submit 'フォロー' %>
+      <%= f.submit 'フォロー', class: "follow-input" %>
 
     <% end %>
   <% end %>

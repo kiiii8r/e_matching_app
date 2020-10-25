@@ -122,6 +122,11 @@
 
 .point-font {
   color: white;
+  display: inline-block;
+}
+
+.my-point-font {
+  color: white;
   margin-right: -10px;
   display: inline-block;
 }

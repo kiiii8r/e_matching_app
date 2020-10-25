@@ -23,6 +23,10 @@
 
             <h2><%= @user.nickname %>さん</h2>
 
+            <%if @relationship.present? %>
+            <p class="follow-value">(フォロー中)</p>
+            <%end%>
+
         </div>
 
         <div class='user-img-content'>
@@ -53,7 +57,7 @@
 
             <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
 
-              <%= f.submit "チャットルームへ", class: 'user-show-btn'%>
+              <%= f.submit "チャットルーム", class: 'user-show-btn'%>
 
               <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
 
@@ -70,12 +74,29 @@
 
           <% else %>
 
-            <%= link_to 'チャットルームへ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+  
+          <div class="show-btn">
 
-            <%= render "relationships/follow_button", user: @user %>
+            <div class="follow-count">
+              <div class="follow">follow:<%= @follow %></div>
+              <div class="follow">follower:<%= @follower %></div>
+            </div>
 
-             <%= flash[:success] %>
-             <%= flash.now[:alert] %>
+            <div class="follow-btn">
+
+              <%= render "relationships/follow_button", user: @user %>
+
+            </div>
+
+            <div class="chat-btn">
+
+              <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+
+            </div>
+          </div>
+
+          <%= flash[:success] %>
+          <%= flash.now[:alert] %>
 
           <% end %>
         </div>

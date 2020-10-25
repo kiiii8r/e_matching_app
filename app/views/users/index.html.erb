@@ -58,7 +58,10 @@
 
       <h3 class='follow-title'>- follow list -</h3>
       <div class="content">
-        <div class="follow-list">
+        <div class="follow-contents">
+
+          <%= render partial: "relationships/relationship", collection: @relationships %>
+
         </div>
       </div>
 

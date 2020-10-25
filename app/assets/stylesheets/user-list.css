@@ -26,11 +26,16 @@
   text-align: center;
 }
 
-.follow-list {
+.follow-contents {
   border-top: 1px gray solid;
   border-bottom: 1px gray solid;
   height: 15vw;
   background-color: whitesmoke;
+}
+
+.follow-img {
+  height: 10vw;
+  width: 6vw;
 }
 
 .main {

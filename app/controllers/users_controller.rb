@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @profile = Profile.find(params[:id])
-    @relationship = Relationship.where(follow_id: @user.id).find_by(user_id: current_user.id)
+    @relationships = Relationship.where(follow_id: @user.id).find_by(user_id: current_user.id)
     @follow = Relationship.where(user_id: @user.id).count
     @follower = Relationship.where(follow_id: @user.id).count
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)

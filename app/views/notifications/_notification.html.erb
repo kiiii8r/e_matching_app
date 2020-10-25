@@ -26,27 +26,44 @@
       <% end %>
 
     <div class="notice-right">
+
+      <% if notification.message_id.present? %>
+
+       <div class="notice-relation">
       
-      <%= notification_form(notification, @visiter) %>
+        <%= notification_form(notification, @visiter) %>
 
-      <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
+        <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
 
-      <br>
+        <br>
 
-      <div class="new-message">
+        <div class="new-message">
 
-        <% if notification.message.present? %>
+          <% if notification.message.present? %>
 
-          <div class="notice-message" ><%= notification.message.message %></div>
+            <div class="notice-message" ><%= notification.message.message %></div>
 
-        <% end %>
+          <% end %>
 
-        <% if notification.message.image.present? %>
+          <% if notification.message.image.present? %>
 
-          <div><%=image_tag notification.message.image, class: "notice-image" %></div>
+            <div><%=image_tag notification.message.image, class: "notice-image" %></div>
 
-        <% end %>
-      </div>
+          <% end %>
+
+        </div>
+
+      <% elsif notification.relationship_id.present? %>
+
+        <div class="notice-relation">
+
+          <%= notification_form(notification, @visiter) %>
+
+          <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
+        </div>
+
+      <% end %>
+
     </div>
   </div>
 </div>

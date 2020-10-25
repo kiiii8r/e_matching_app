@@ -92,20 +92,20 @@
   height: 10vh;
 }
 
-.detail-contents  {
-  align-items: center;
-  padding-top: 30px;
+.user-detail {
+  height: 700px;
+  width: 45%;
 }
 
-.user-detail {
-  height: 100%;
-  width: 45%;
+.detail-contents  {
+  align-items: center;
+  padding-top: 10px;
 }
 
 .detail-list {
   display: flex;
-  padding: 25px 13px 0 13px;
-  font-size: 18px;
+  padding: 20px 13px 0px 13px;
+  font-size: 15px;
   border-bottom: 1px lightgray solid; 
 }
 

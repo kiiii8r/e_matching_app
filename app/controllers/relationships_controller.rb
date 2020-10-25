@@ -1,7 +1,7 @@
 class RelationshipsController < ApplicationController
 
   def create
-    if Relationship.create!(user_set)
+    if Relationship.create(user_set)
       flash[:success] = 'ユーザーをフォローしました'
       redirect_to user_path(params[:follow_id])
     else

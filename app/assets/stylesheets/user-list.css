@@ -37,14 +37,36 @@
 
 .follow-list {
   scroll-snap-align: start;
-  margin: 5px;
+  margin: 10px 15px;
   display: flex;
+  border-bottom: 1px gray dotted;
 }
 
 .follow-img {
   height: 4vw;
   width: 4vw;
   border-radius: 50%;
+  border: 1px rgba(0, 0, 0, 0.795) solid;
+}
+
+.follow-right {
+  display: flex;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.follow-name {
+  display: block;
+  align-items: center;
+  font-size: 15px;
+}
+
+.follow-status {
+  display: flex;
+  justify-content: space-around;
 }
 
 .main {

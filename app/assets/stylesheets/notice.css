@@ -24,9 +24,6 @@
  width: 30vw;
 }
 
-.notice-content {
-
-}
 
 .new-message {
   overflow: auto;
@@ -50,8 +47,4 @@
 .notice-image {
   max-height: 8vw;
   max-width: 8vw;
-}
-
-.notice-relation {
-
 }

@@ -13,8 +13,8 @@ class RelationshipsController < ApplicationController
   end
 
   def destroy
-    @relationship = Relationship.find((Relationship.where(user_id: current_user.id).pluck(:id) & Relationship.where(follow_id: params[:follow_id]).pluck(:id))[0])
-    if @relationship.destroy
+    @relationship_search = Relationship.find((Relationship.where(user_id: current_user.id).pluck(:id) & Relationship.where(follow_id: params[:follow_id]).pluck(:id))[0])
+    if @relationship_search.destroy
       flash[:success] = 'ユーザーのフォローを解除しました'
       redirect_to user_path(params[:follow_id])
     else

@@ -16,7 +16,7 @@
 .notice-block {
  display: flex;
  padding: 10px 50px 10px 50px;
- border-bottom: 1px gray solid;
+ border-bottom: 1px gray dotted;
 }
 
 .notice-right {

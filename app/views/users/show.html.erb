@@ -23,7 +23,7 @@
 
             <h2><%= @user.nickname %>さん
 
-            <%if @relationship.present? %>
+            <%if @relationships.present? %>
 
             <p class="follow-value">(フォロー中)</p>
 
@@ -55,7 +55,16 @@
 
           <% if current_user.id == @user[:id] %>
 
-            <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+           <div class="show-btn">
+
+              <div class="follow-count">
+                <div class="follow">follow:<%= @follow %></div>
+                <div class="follow">follower:<%= @follower %></div>
+              </div>
+
+              <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+
+            </div>
 
           <% elsif @room_number.blank? %>
 

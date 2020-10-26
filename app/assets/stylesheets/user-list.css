@@ -126,6 +126,8 @@
   width: 18vw;
   scroll-snap-type: mandatory;
   height: 3vw;
+  justify-content: center;
+  display: block;
 }
 
 .list-upper {

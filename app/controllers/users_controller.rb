@@ -3,9 +3,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :search, :show]
 
   def index
-    @users = User.all.order('created_at DESC')
+    @users = User.all.order('Profile created_at DESC')
     set_user_column
-
+    @relationships = Relationship.where(user_id: current_user.id)
     @search = User.search(params[:q])
     @users = @search.result
   end
@@ -17,6 +17,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @profile = Profile.find(params[:id])
+    @relationships = Relationship.where(follow_id: @user.id).find_by(user_id: current_user.id)
+    @follow = Relationship.where(user_id: @user.id).count
+    @follower = Relationship.where(follow_id: @user.id).count
     @room_number = RoomUser.where(user_id: current_user.id).pluck(:room_id) & RoomUser.where(user_id: @user.id).pluck(:room_id)
   end
 

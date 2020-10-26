@@ -56,10 +56,22 @@
 
       <% end %>
 
+      <h3 class='follow-title'>- follow list -</h3>
+
+      <div class="follow-contents">
+
+        <%= render partial: "relationships/relationship", collection: @relationships %>
+
+      </div>
+
+
     </div>
 
     <div class='user-contents'>
       <h2 class='user-list-title'>User list</h2>
+
+      <%= flash[:success] %>
+      <%= flash.now[:alert] %>
 
       <ul class='user-list'>
 
@@ -113,8 +125,7 @@
                       <div class='lower-list-title'><span class='lower-title'>使用言語</span></div>
                       <div class="language-content"><%= user.profile.language %></div>
                     </div>
-                  </div>
-    
+                  </div>   
                 </div>
 
               <% end %>

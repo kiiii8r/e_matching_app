@@ -21,7 +21,15 @@
 
         <div class="user-name-box">
 
-            <h2><%= @user.nickname %>さん</h2>
+            <h2><%= @user.nickname %>さん
+
+            <%if @relationships.present? %>
+
+            <p class="follow-value">(フォロー中)</p>
+
+            <%end%>
+
+            </h2>
 
         </div>
 
@@ -47,13 +55,37 @@
 
           <% if current_user.id == @user[:id] %>
 
-            <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+           <div class="show-btn">
+
+              <div class="follow-count">
+                <div class="follow">follow:<%= @follow %></div>
+                <div class="follow">follower:<%= @follower %></div>
+              </div>
+
+              <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+
+            </div>
 
           <% elsif @room_number.blank? %>
 
+          <div class="show-btn">
+
+            <div class="follow-count">
+              <div class="follow">follow:<%= @follow %></div>
+              <div class="follow">follower:<%= @follower %></div>
+            </div>
+
+            <div class="follow-btn">
+
+              <%= render "relationships/follow_button", user: @user %>
+
+            </div>
+
+            <div class="chat-btn">
+
             <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
 
-              <%= f.submit "チャットルームへ", class: 'user-show-btn'%>
+              <%= f.submit "チャットルーム", class: 'user-show-btn'%>
 
               <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
 
@@ -63,9 +95,37 @@
 
             <% end %>
 
+            </div>
+          </div>
+
+          <%= flash[:success] %>
+          <%= flash.now[:alert] %>
+
           <% else %>
 
-            <%= link_to 'チャットルームへ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+  
+          <div class="show-btn">
+
+            <div class="follow-count">
+              <div class="follow">follow:<%= @follow %></div>
+              <div class="follow">follower:<%= @follower %></div>
+            </div>
+
+            <div class="follow-btn">
+
+              <%= render "relationships/follow_button", user: @user %>
+
+            </div>
+
+            <div class="chat-btn">
+
+              <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+
+            </div>
+          </div>
+
+          <%= flash[:success] %>
+          <%= flash.now[:alert] %>
 
           <% end %>
         </div>
@@ -87,6 +147,11 @@
           <div class="detail-list">
             <div class="detail-name">年齢：</div>
             <div class="detail-value"><%= @user.age %></div>
+          </div>
+            
+          <div class="detail-list">
+            <div class="detail-name">性別：</div>
+            <div class="detail-value"><%= @user.gender %></div>
           </div>
             
           <div class="detail-list">

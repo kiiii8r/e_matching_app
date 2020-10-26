@@ -10,9 +10,22 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :messages
   has_many :rooms, through: :room_users
+  has_many :notifications
+
+  has_many :relationships
+  has_many :followings, through: :relationships, source: :follow
+  has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
+  has_many :followers, through: :reverse_of_relationships, source: :user
+
+
+  def following?(other_user)
+    self.followings.include?(other_user)
+  end
+
+
+  validates :nickname, presence: true, length: { maximum: 8 } 
 
   with_options presence: true do
-    validates :nickname
     validates :birth_day
     validates :gender
     validates :age

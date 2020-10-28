@@ -55,14 +55,14 @@
 
           <% if current_user.id == @user[:id] %>
 
-           <div class="show-btn">
+            <div class="my-show-btn">
 
               <div class="follow-count">
                 <div class="follow">follow:<%= @follow %></div>
                 <div class="follow">follower:<%= @follower %></div>
               </div>
 
-              <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "user-show-btn" %>
+              <%= link_to 'プロフィールの編集', edit_user_profile_path(@user[:id]), class: "profile-btn" %>
 
             </div>
 
@@ -106,20 +106,23 @@
   
           <div class="show-btn">
 
-            <div class="follow-count">
-              <div class="follow">follow:<%= @follow %></div>
-              <div class="follow">follower:<%= @follower %></div>
-            </div>
+             <div class="second-btn">
 
-            <div class="follow-btn">
+              <div class="follow-count">
+                <div class="follow">follow:<%= @follow %></div>
+                <div class="follow">follower:<%= @follower %></div>
+              </div>
 
-              <%= render "relationships/follow_button", user: @user %>
+              <div class="follow-btn">
 
+                <%= render "relationships/follow_button", user: @user %>
+
+              </div>
             </div>
 
             <div class="chat-btn">
 
-              <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+                <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
 
             </div>
           </div>

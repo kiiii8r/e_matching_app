@@ -162,7 +162,7 @@
 
 @media screen and (max-width: 1024px) { 
   .user-show {
-    height: 480px;
+    height: 510px;
   }
 
   .user-show-img {
@@ -234,6 +234,7 @@
 
   .detail-value {
     height: 4vw;
+    width: 50vw;
   }
 
   .user-box {
@@ -245,4 +246,5 @@
     margin-left: calc(100% - 90%);
     width: 80%;
   }
+
 }

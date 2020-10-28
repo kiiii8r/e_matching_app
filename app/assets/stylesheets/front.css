@@ -19,7 +19,7 @@
 .back-signup:hover{
   z-index: 600;
   background-color: whitesmoke;
-  opacity: 100;
+  opacity: 1;
 }
 
 .back-signup a {
@@ -44,7 +44,7 @@
 
 .match-title {
   position: fixed;
-  width: 79vw;
+  width: 84vw;
   font-size: 150px;
   font-weight: 800;
   color: black;
@@ -53,9 +53,52 @@
 }
 
 @media screen and (max-width: 1024px) { 
+  .front-show {
+    height: 550px;
+  }
 
+  .match-front {
+    height: 500px;
+    font-size: 600px;
+  }
+
+  .match-title {
+    width: 92vw;
+    font-size: 130px;
+    font-weight: 900;
+  }
 }
 
 @media screen and (max-width: 812px) { 
+  .front-show {
+    height: 520px;
+    text-align: center;
+  }
+
+  .back-signup {
+    width: 84vw;
+    font-weight: 400;
+    font-size: 40px;
+    padding-top: 60px;
+    padding-bottom: 360px;
+  }
+  
+
+  .back-signup a {
+    border-radius: 50px;
+    padding: 20px;
+  }
+
+  .match-front {
+    height: 400px;
+    margin-top: 73px;
+    font-size: large;
+  }
+
+  .match-title {
+    width: 84vw;
+    font-size: 76px;
+    font-weight: 600;
+  }
 
 }

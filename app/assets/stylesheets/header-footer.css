@@ -183,7 +183,7 @@ aside {
 .footer {
   z-index: 999;
   background-color: white;
-  height:450px;
+  height:500px;
 }
 
 .footer-contents {
@@ -194,7 +194,7 @@ aside {
 .main-text {
   font-size: 33px;
   font-weight: 900;
-  width: 900px;
+  width: 70%;
   color: gray;
 }
 
@@ -226,6 +226,11 @@ aside {
 }
 
 @media screen and (max-width: 1024px) { 
+
+  .main-text {
+    font-size: 30px;
+    font-weight: 800;
+  }
 
 }
 
@@ -317,7 +322,7 @@ aside {
   top: -400px;
   width: 100%;
   right: 0;
-  background-color: whitesmoke;
+  background-color: lightgray;
 }
 
 .v-menu-list li {
@@ -339,6 +344,12 @@ input[type="checkbox"]:checked ~ .open-v {
 
 .blue-point {
   margin-right: 40px;
+}
+
+.main-text {
+  font-size: 23px;
+  font-weight: 600;
+  width: 100%;
 }
 
 }

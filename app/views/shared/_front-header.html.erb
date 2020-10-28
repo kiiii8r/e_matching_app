@@ -29,9 +29,18 @@
           <div class='header-title'>eMatch Pro</div>
             <ul class='lists-lower'>
 
-              <li><%= link_to 'Top page', root_path, class: "header-link" %></li>
+              <input class="menu-v" id="menu-v" type="checkbox" />
+              <label for="menu-v" class="open-v">v</label>
+              <label for="menu-v" class="back-v"></label>
 
-              <li><%= link_to 'Log in', user_session_path, class: "header-link" %></li> 
+                <div class="v-menu-list">
+                  <label for="menu-v" class="close-v"></label>
+
+                  <li><%= link_to 'Top page', root_path, class: "header-link" %></li>
+
+                  <li><%= link_to 'Log in', user_session_path, class: "header-link" %></li> 
+
+                </div>
 
               <li class="blue-point"><%= link_to '新規',  new_user_registration_path, class: "point-font" %></li>
 

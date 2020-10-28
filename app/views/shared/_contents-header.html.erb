@@ -7,22 +7,39 @@
     <div class='nav-upper'>
       <ul class='lists-upper'>
         <li><a class="top-logo" href="#">🌙</a></li>
-        <li><a class="top-btn" href="#">1</a></li> 
-        <li><a class="top-btn" href="#">2</a></li>
-        <li><a class="top-btn" href="#">3</a></li> 
-        <li><a class="top-btn" href="#">4</a></li>
-        <li><a class="top-btn" href="#">5</a></li> 
-        <li><a class="top-btn" href="#">6</a></li>
-        <li><a class="top-btn" href="#">7</a></li>
-        <li><a class="top-btn" href="#">8</a></li>
-        <li><a class="top-second-logo" href="#">🌚</a></li> 
+        <div class="top-list">
+          <input id="menu" type="checkbox" />
+          <label for="menu" class="open">●</label>
+          <label for="menu" class="back"></label>
+          <aside>
+            <label for="menu" class="close">✖</label>
+            <li><a class="top-btn" href="#">1</a></li> 
+            <li><a class="top-btn" href="#">2</a></li>
+            <li><a class="top-btn" href="#">3</a></li> 
+            <li><a class="top-btn" href="#">4</a></li>
+            <li><a class="top-btn" href="#">5</a></li> 
+            <li><a class="top-btn" href="#">6</a></li>
+            <li><a class="top-btn" href="#">7</a></li>
+            <li><a class="top-btn" href="#">8</a></li>
+          </aside>
+        </div>
+          <li><a class="top-second-logo" href="#">🌚</a></li> 
       </ul>
     </div>
     <div class='nav-lower-lock' id='nav-lower' >
       <div class='nav-lower'>
         <div class='lower-contents'>
-          <div class='header-title'>eMatch Pro</div>
-            <ul class='lists-lower'>
+
+          <%= link_to 'eMatch Pro', users_path, class: 'header-title' %>
+
+          <ul class='lists-lower'>
+
+            <input class="menu-v" id="menu-v" type="checkbox" />
+            <label for="menu-v" class="open-v">v</label>
+            <label for="menu-v" class="back-v"></label>
+
+            <div class="v-menu-list">
+                <label for="menu-v" class="close-v"></label>
 
               <li><%= link_to 'User list', users_path, class: "header-link" %></li>
 
@@ -36,7 +53,7 @@
 
               <% elsif @notice_count != 0 %>
 
-               <div class="notice-box">
+                <div class="notice-box">
               <span class="notice_count"><%= @notice_count %></span>
               </div>
 
@@ -46,11 +63,12 @@
           
               <li><%= link_to 'Log out', destroy_user_session_path, class: "header-link",  method: :delete %></li>
 
-              <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id) , class: "my-point-font " %> <span class="header-my-link">: My page</span></li>
+            </div>
 
-    
-            </ul>
-          </div>
+            <li class="blue-point"><%= link_to current_user.nickname, user_path(current_user.id) , class: "my-point-font " %> <span class="header-my-link">: My page</span></li>
+
+  
+          </ul>
         </div>
       </div>
     </div>

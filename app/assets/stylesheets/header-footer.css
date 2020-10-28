@@ -297,7 +297,7 @@ aside {
 
 .open-v {
   position: absolute;
-  right: 50px;
+  right: 0;
   top: 14px;
   padding: 10px 20px;
   font-size: 18px;
@@ -335,6 +335,10 @@ input[type="checkbox"]:checked ~ .v-menu-list {
 
 input[type="checkbox"]:checked ~ .open-v {
   transform: scaleY(-1);
+}
+
+.blue-point {
+  margin-right: 40px;
 }
 
 }

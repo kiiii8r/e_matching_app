@@ -181,55 +181,46 @@
 @media screen and (max-width: 1024px) { 
 
   .chat-contents {
-    height: 800px;
-    display: flex;
+    height: 700px;
   }
 
   .left-side-bar {
-    background-color: rgba(0, 0, 0, 0.952);
-    height:  100%;
     width: 100px;
   }
 
   .left-side {
-    color: white;
-    font-weight: bolder;
     font-size: 80px;
-    position: relative;
-    top: 300px;
-    right: 200px;
-    letter-spacing: 5px;
+    top: 280px;
+    right: 210px;
+    letter-spacing: 8px;
   }
 
   .right-side-bar {
-    background-color: rgba(0, 0, 0, 0.952);
-    height:  100%;
     width: 100px;
   }
 
   .right-side {
-    font-weight: bold;
     font-size: 80px;
-    position: relative;
-    bottom: -40%;
-    left: -250%;
-    letter-spacing: 10px;
+    top: 290px;
+    right: 230px;
+    letter-spacing: 8px;
   }
 
   .message-view {
     width: calc(100% - 200px);
   }
 
-  overflow: auto;
-  scroll-snap-type: mandatory;
-  height: calc(800px - 170px);
-  border-left: 10px lightgray solid;
-  border-right: 10px lightblue solid;
-  background-color: whitesmoke;
-}
+  .messages {
+    height: calc(700px - 170px);
+  }
+  
 }
 
 @media screen and (max-width: 812px) { 
+
+  .chat-contents {
+    height: 600px;
+  }
 
   .right-contents {
     background-color: rgba(0, 0, 0, 0.952);
@@ -237,6 +228,28 @@
 
   .left-contents {
     background-color: rgba(0, 0, 0, 0.952);
+  }
+
+  .left-side-bar {
+    width: 30px;
+  }
+
+  .left-side {
+    font-size: 80px;
+    top: 280px;
+    right: 210px;
+    letter-spacing: 8px;
+  }
+
+  .right-side-bar {
+    width: 30px;
+  }
+
+  .right-side {
+    font-size: 80px;
+    top: 290px;
+    right: 230px;
+    letter-spacing: 8px;
   }
 
   .chat-contents {

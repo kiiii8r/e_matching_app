@@ -58,7 +58,9 @@
 
         <div class="notice-relation">
 
-          <%= notification_form(notification, @visiter) %>
+          <div class="relation-name">
+            <%= notification_form(notification, @visiter) %>
+          </div>
 
           <div class="moderate-font"><%= " (#{time_ago_in_words(notification.created_at)} )" %></div>
         </div>

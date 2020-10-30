@@ -48,7 +48,6 @@
 
 .message-view {
   width: calc(100% - 260px);
-  z-index: 5;
 }
 
 .chat-header {
@@ -59,8 +58,8 @@
 }
 
 .header-partner {
-  margin: 12px 0 0 40px;
-  color: white;
+  margin: 10px 0 10px 30px ;
+  color: rgba(0, 0, 0, 0.747);
   font-size: large;
 }
 
@@ -69,7 +68,7 @@
 }
 
 .header-button a {
-  color: white;
+  color:rgba(0, 0, 0, 0.753);
 }
 
 .header-button a:hover {
@@ -149,8 +148,8 @@
 }
 
 .partner-img {
-  height: 5vw;
-  width: 5vw;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
 }
 
@@ -213,6 +212,24 @@
   .messages {
     height: calc(700px - 170px);
   }
+
+  .partner-image {
+    margin: 10px 10px;
+  }
+
+  .message-content {
+    margin: 20px 10px 0 10px;
+  }
+  
+  .message-text {
+    max-width: 30vw;
+    padding: 12px;
+  }
+
+  .partner-img {
+    height: 70px;
+    width: 70px;
+  }
   
 }
 
@@ -224,8 +241,8 @@
 
   .right-contents {
     background-color: rgba(0, 0, 0, 0.952);
-    width: 0px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
   }
 
   .left-contents {
@@ -235,19 +252,23 @@
   }
 
   .left-side-bar {
-    width: 30px;
+    width: 50px;
   }
 
   .left-side {
-    display: none;
+    font-size: 60px;
+    top: 250px;
+    right: 210px;
+    letter-spacing: 12px;
   }
 
   .right-side-bar {
-    width: 30px;
+    width: 0;
   }
 
   .right-side {
     display: none;
+    font-size: 80px;
   }
 
   .chat-contents {
@@ -256,8 +277,16 @@
     display: flex;
   }
 
+  .header-partner {
+    margin: 10px;
+  }
+
+  .right-header {
+    margin: 17px 10px 13px 0;
+  }
+
   .message-view {
-    width: calc(100% - 60px);
+    width: calc(100% - 50px);
   }
 
   .messages {
@@ -267,8 +296,37 @@
   .message-image {
     height: 20vw;
     width: 30vw;
-    margin-top: -16px; 
-    padding: 0 15px 15px 15px;
+    margin-top: -10px; 
+    margin-bottom: -10px;
+  }
+
+  .message-content {
+    margin: 20px 10px 0 10px;
+  }
+
+  .message-contents {
+    font-size: 16px;
+  }
+
+  .message-box {
+    margin: 8px;
+    margin-bottom: 14px;
+    align-items: center;
+  }
+
+  .left-message {
+    font-size: 16px;
+  }
+
+  .left-image {
+    padding: 5px;
+    margin-top: -10px;
+    padding: 0 10px 10px 10px;
+  }
+  
+  .message-text {
+    max-width: 30vw;
+    padding: 10px;
   }
 
   .my-message {
@@ -277,4 +335,28 @@
     justify-content: right;
   }
 
+  .partner-img {
+    height: 40px;
+    width: 40px;
+  }
+
+.chat-footer {
+  height: 120px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.form-input {
+  padding: 20px;
+}
+
+.form-message {
+  width: 31vw;
+  margin: 3px;
+}
+
+.form-image{
+  margin-top: 10px;
+  margin-left: 10px;
+}
 }

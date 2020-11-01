@@ -1,14 +1,9 @@
 <%= render "shared/front-header" %>
 
-
-<div class ='right-contents'></div>
-
-<div class ='left-contents'></div>
-
 <div class ='main-contents'>
 
     <div class='front-show'>
-            <div class='back-signup'><%= link_to 'Sign up!', new_user_registration_path, class: "sign-up" %>
+            <div class='back-signup'><%= link_to 'Sign up!', new_user_registration_path, class: "sign-up" %><br><br><%= link_to 'Log in!', user_session_path, class: "sign-up" %>
             </div>
            
         <div class='match-front'>

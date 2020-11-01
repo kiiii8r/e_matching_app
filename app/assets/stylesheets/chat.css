@@ -6,17 +6,18 @@
 
 .left-side-bar {
   background-color: rgba(0, 0, 0, 0.952);
-  width: 10%;
+  height:  100%;
+  width: 130px;
 }
 
 .left-side {
   color: white;
   font-weight: bolder;
   font-size: 100px;
-  height: 100%;
   position: relative;
-  top: 35%;
-  right: 190%;
+  top:  310px;
+  right: 240px;
+  letter-spacing: 6px;
 }
 
 .left-text {
@@ -26,22 +27,27 @@
 
 .right-side-bar {
   background-color: rgba(0, 0, 0, 0.952);
-  width: 10%;
+  height: 100%;
+  width: 130px;
 }
 
 .right-side {
   color: white;
   font-weight: bolder;
   font-size: 100px;
-  height: 100%;
   position: relative;
-  bottom: -35%;
-  left: -190%;
+  top: 310px;
+  right: 270px;
+  letter-spacing: 6px;
 }
 
 .right-text {
   transform: rotate(90deg);
   position: absolute;
+}
+
+.message-view {
+  width: calc(100% - 260px);
 }
 
 .chat-header {
@@ -52,8 +58,8 @@
 }
 
 .header-partner {
-  margin: 12px 0 0 40px;
-  color: white;
+  margin: 10px 0 10px 30px ;
+  color: rgba(0, 0, 0, 0.747);
   font-size: large;
 }
 
@@ -62,7 +68,7 @@
 }
 
 .header-button a {
-  color: white;
+  color:rgba(0, 0, 0, 0.753);
 }
 
 .header-button a:hover {
@@ -76,15 +82,10 @@
   padding: 0 15px 15px 15px;
 }
 
-.message-view {
-  width: 80%;
-  z-index: 5;
-}
-
 .messages {
   overflow: auto;
   scroll-snap-type: mandatory;
-  height: calc(100% - 170px);
+  height: calc(800px - 170px);
   border-left: 10px lightgray solid;
   border-right: 10px lightblue solid;
   background-color: whitesmoke;
@@ -147,8 +148,8 @@
 }
 
 .partner-img {
-  height: 5vw;
-  width: 5vw;
+  height: 75px;
+  width: 75px;
   border-radius: 50%;
 }
 
@@ -174,4 +175,188 @@
 
 .search-genre {
   padding-top: 8px;
+}
+
+@media screen and (max-width: 1024px) { 
+
+  .chat-contents {
+    height: 700px;
+  }
+
+  .left-side-bar {
+    width: 100px;
+  }
+
+  .left-side {
+    font-size: 80px;
+    top: 280px;
+    right: 210px;
+    letter-spacing: 8px;
+  }
+
+  .right-side-bar {
+    width: 100px;
+  }
+
+  .right-side {
+    font-size: 80px;
+    top: 290px;
+    right: 230px;
+    letter-spacing: 8px;
+  }
+
+  .message-view {
+    width: calc(100% - 200px);
+  }
+
+  .messages {
+    height: calc(700px - 170px);
+  }
+
+  .partner-image {
+    margin: 10px 10px;
+  }
+
+  .message-content {
+    margin: 20px 10px 0 10px;
+  }
+  
+  .message-text {
+    max-width: 30vw;
+    padding: 12px;
+  }
+
+  .partner-img {
+    height: 70px;
+    width: 70px;
+  }
+  
+}
+
+@media screen and (max-width: 812px) { 
+
+  .chat-contents {
+    height: 600px;
+  }
+
+  .right-contents {
+    background-color: rgba(0, 0, 0, 0.952);
+    width: 100%;
+    height: 100%;
+  }
+
+  .left-contents {
+    background-color: rgba(0, 0, 0, 0.952);
+    width: 100%;
+    height: 100%;
+  }
+
+  .left-side-bar {
+    width: 50px;
+  }
+
+  .left-side {
+    font-size: 60px;
+    top: 250px;
+    right: 210px;
+    letter-spacing: 12px;
+  }
+
+  .right-side-bar {
+    width: 0;
+  }
+
+  .right-side {
+    display: none;
+    font-size: 80px;
+  }
+
+  .chat-contents {
+    width: 100%;
+    height: 600px;
+    display: flex;
+  }
+
+  .header-partner {
+    margin: 10px;
+  }
+
+  .right-header {
+    margin: 17px 10px 13px 0;
+  }
+
+  .message-view {
+    width: calc(100% - 50px);
+  }
+
+  .messages {
+    height: calc(600px - 170px);
+  }
+
+  .message-image {
+    height: 20vw;
+    width: 30vw;
+    margin-top: -10px; 
+    margin-bottom: -10px;
+  }
+
+  .message-content {
+    margin: 20px 10px 0 10px;
+  }
+
+  .message-contents {
+    font-size: 16px;
+  }
+
+  .message-box {
+    margin: 8px;
+    margin-bottom: 14px;
+    align-items: center;
+  }
+
+  .left-message {
+    font-size: 16px;
+  }
+
+  .left-image {
+    padding: 5px;
+    margin-top: -10px;
+    padding: 0 10px 10px 10px;
+  }
+  
+  .message-text {
+    max-width: 30vw;
+    padding: 10px;
+  }
+
+  .my-message {
+    margin: 20px 10px 10px 0;
+    text-align: right;
+    justify-content: right;
+  }
+
+  .partner-img {
+    height: 40px;
+    width: 40px;
+  }
+
+.chat-footer {
+  height: 120px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.form-input {
+  padding: 20px;
+}
+
+.form-message {
+  width: 31vw;
+  margin: 3px;
+}
+
+.form-image{
+  margin-top: 10px;
+  margin-left: 10px;
+}
 }

@@ -45,6 +45,15 @@
   justify-content: center;
 }
 
+.my-show-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.second-btn {
+  display: flex;
+}
+
 .follow-count {
   display: flex;
   font-size: small;
@@ -52,21 +61,32 @@
 }
 
 .follow {
-  padding: 3px;
+  padding: 2px;
+}
+
+.profile-btn {
+  color: black;
+  background-color: white;
+  border: 2px rgba(0, 0, 0, 0.726) solid;
+  padding: 3px 5px;
+  margin-left: 1vw;
+  display: block;
+  font-size: 12px;
 }
 
 .user-show-btn {
   color: black;
   background-color: white;
   border: 2px rgba(0, 0, 0, 0.726) solid;
-  padding: 1px 5px;
-  margin-left: 3px;
+  padding: 3px 5px;
+  margin-left: 1vw;
   display: block;
+  font-size: 12px;
 } 
 
 .follow-input {
   background-color: white;
-  width: 95px;
+  width: 93px;
 }
 
 .user-explain {
@@ -97,7 +117,7 @@
   width: 45%;
 }
 
-.detail-contents  {
+.detail-contents {
   align-items: center;
   padding-top: 10px;
 }
@@ -126,7 +146,7 @@
   text-align: center;
   width: 30vw;
   scroll-snap-type: mandatory;
-  height: 3vw;
+  height: 2vw;
 }
 
 .option {
@@ -138,4 +158,93 @@
   color: red;
   font-size: large;
   margin: 20px;
+}
+
+@media screen and (max-width: 1024px) { 
+  .user-show {
+    height: 510px;
+  }
+
+  .user-show-img {
+    width: 23vw;
+    height: 23vw;
+  }
+
+  .detail-value {
+    height: 3vw;
+  }
+
+
+}
+
+@media screen and (max-width: 812px) { 
+  .user-show {
+    display: block;
+    height: 1000px;
+    width: 100%;
+  }
+
+  .user-name-box {
+    font-size: 12px;
+  }
+
+  .follow-value {
+    font-size: 11px;
+  }
+
+  .user-show-img {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .follow-count {
+    justify-content: center;
+  }
+
+  .second-btn {
+    justify-content: center;
+  }
+
+  .show-btn {
+    display: block;
+  }
+
+  .user-show-btn {
+    width: 60px;
+  }
+
+  .chat-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .chat-btn a {
+    font-size: 12px;
+    padding: 2px 25px;
+  }
+
+  .detail-contents  {
+    padding-top: 0px;
+  }
+
+  .detail-list {
+    font-size: 12px;
+  }
+
+  .detail-value {
+    height: 4vw;
+    width: 50vw;
+  }
+
+  .user-box {
+    margin-left: calc(100% - 90%);
+    width: 80%;
+  }
+
+  .user-detail {
+    margin-left: calc(100% - 90%);
+    width: 80%;
+  }
+
 }

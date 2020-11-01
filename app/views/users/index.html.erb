@@ -4,9 +4,10 @@
 
   <div class='user-list-contents'>
     <input id="s-menu" type="checkbox" />
-    <label for="s-menu" class="s-open">●</label>
+      <label for="s-menu" class="s-back"></label> 
+    <label for="s-menu" class="s-open">></label>
     <div class="side-menu">
-      <label for="s-menu" class="s-close">×</label>
+      <label for="s-menu" class="s-close"></label>
 
       <div class='search-contents'>
 
@@ -113,14 +114,17 @@
                       <%= user.nickname %>
                     </div>
 
-                    <div class='list-age'>
-                      <div class='list-title'>年齢</div>
-                      <%= user.age %>歳
-                    </div>
+                    <div class="sub-list">
 
-                    <div class='list-role'>
-                      <div class='list-title'>主な役割</div>
-                      <%= user.profile.role.name %>
+                      <div class='list-age'>
+                        <div class='list-title'>年齢</div>
+                        <%= user.age %>歳
+                      </div>
+
+                      <div class='list-role'>
+                        <div class='list-title'>主な役割</div>
+                        <%= user.profile.role.name %>
+                      </div>
                     </div>
                   </div>
             

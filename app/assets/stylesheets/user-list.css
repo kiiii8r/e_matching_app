@@ -221,11 +221,10 @@ input[type="checkbox"] {
     margin: 12px;
   }
 
-  
-.follow-img {
-  height: 40px;
-  width: 40px;
-}
+  .follow-img {
+    height: 40px;
+    width: 40px;
+  }
 
   .follow-name {
     display: block;
@@ -244,7 +243,6 @@ input[type="checkbox"] {
   .user-list-contents {
     display: block;
     height: 600px;
-    width: ;
   }
 
   .user-list-title {
@@ -253,6 +251,8 @@ input[type="checkbox"] {
 
   .user-list {
     width: 85vw;
+    margin-bottom: 20px;
+    height:600px;
   }
 
   .list {
@@ -324,7 +324,8 @@ input[type="checkbox"] {
     display: list-item;
     transition: all 0.3s;
     position: absolute;
-    z-index: 800;
+    z-index: 1001;
+    top: 0;
     left: -500px;
   }
 

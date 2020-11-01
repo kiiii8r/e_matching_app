@@ -57,6 +57,7 @@ aside {
 .nav-lower-lock {
   width: 100%;
   position: absolute;
+  z-index: 1500;
 }
 
 .nav-lower {
@@ -318,10 +319,10 @@ aside {
   display: list-item;
   transition: all 0.4s;
   position: absolute;
-  z-index: 800;
+  z-index: 2000;
   top: -400px;
+  left: 0;
   width: 100%;
-  right: 0;
   background-color: lightgray;
 }
 

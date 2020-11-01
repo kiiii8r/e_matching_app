@@ -203,6 +203,37 @@ input[type="checkbox"] {
 }
 
 @media screen and (max-width: 1024px) { 
+
+  .search-contents {
+    width: 240px;
+  }
+
+  .list-img {
+    height: 220px;
+    width: 220px;
+  }
+
+  .list-name {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  .list-age {
+    font-size: 12px;
+  }
+
+  .list-role {
+    font-size: 12px;
+  }
+
+  .list-language {
+    font-size: 13px;
+  }
+
+  .language-content {
+    width: 220px;
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 812px) { 
@@ -324,13 +355,12 @@ input[type="checkbox"] {
     display: list-item;
     transition: all 0.3s;
     position: absolute;
-    z-index: 1001;
+    z-index: 3001;
     top: 0;
     left: -500px;
   }
 
   input[type="checkbox"]:checked ~ .side-menu {
-    z-index: 1001;
     top: 0px;
     left: 30px;
     position: fixed;
@@ -338,14 +368,14 @@ input[type="checkbox"] {
 
   input[type="checkbox"]:checked ~ .s-open {
     transform: scaleX(-1);
-    z-index: 1001;
+    z-index: 3001;
     top: 0px;
     height: 750px;
     position: fixed;
   }
 
   input[type="checkbox"]:checked ~.s-back {
-    z-index: 1000;
+    z-index: 3000;
     position: absolute;
     top: 0px;
     left:0px;

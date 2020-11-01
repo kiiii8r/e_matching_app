@@ -340,23 +340,23 @@
     width: 40px;
   }
 
-.chat-footer {
-  height: 120px;
-  text-align: center;
-  background-color: lightblue;
-}
+  .chat-footer {
+    height: 120px;
+    text-align: center;
+    background-color: lightblue;
+  }
 
-.form-input {
-  padding: 20px;
-}
+  .form-input {
+    padding: 20px;
+  }
 
-.form-message {
-  width: 31vw;
-  margin: 3px;
-}
+  .form-message {
+    width: 31vw;
+    margin: 3px;
+  }
 
-.form-image{
-  margin-top: 10px;
-  margin-left: 10px;
-}
+  .form-image{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }

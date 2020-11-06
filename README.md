@@ -9,7 +9,7 @@
 
 ## 本番環境URL
  
-https://e-matching-app.herokuapp.com/
+ http://18.178.217.166
  
 
 
@@ -21,11 +21,11 @@ https://e-matching-app.herokuapp.com/
 
 - Login
   - テストユーザー１
-    - email: tests@gmail.com
+    - email: test1@gmail.com
     - pass: aaa123
 
   - テストユーザー２
-    - email: tests@gmail.com
+    - email: test2@gmail.com
     - pass: aaa123
 
  
@@ -78,7 +78,7 @@ https://e-matching-app.herokuapp.com/
 
 - お気に入り機能(React)
 
-- Docker導入
+- Docker,docker-compose導入
 
 - 足跡機能
 
@@ -86,9 +86,10 @@ https://e-matching-app.herokuapp.com/
 
 - 新規の方でもわかりやすいレイアウトへの調整
 
+- CircleCI導入
+
 - 有料会員機能(API:Payjp)
   - 有料会員専用複数人数チャットルーム作成
-
 
 
 ## データベース設計
@@ -218,18 +219,27 @@ https://e-matching-app.herokuapp.com/
 
 ## 開発環境
 
-- OSとバージョン
-	- Catalina 10.15.6
+- PC
+	- OS: Catalina 
+  - バージョン: 10.15.6
 
-- Rubyバージョン
-	- ruby 2.6.5p114
+- フロントエンド
+  - HTML/CSS
+  - JavaScript
 
-- RubyGemsバージョン
-	- 3.0.3
+- バックエンド
+	- Ruby 2.6.5
+  - rails 6.0.3.4
 
-- Railsバージョン
-	- Rails 6.0.3.4
+- アプリケーションサーバー
+  - 開発環境: Puma 4.3.6
+  - 本番環境: Unicorn 5.4.1
 
-- 本番環境
-  - AWS: S3 EC2
+- データベース
+  - 開発環境: MySQL
+  - 本番環境: MariaDB
+
+- インフラ関連
+  - AWS EC2/S3
+  - Git GitHub
   - Capistrano

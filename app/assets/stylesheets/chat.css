@@ -257,14 +257,11 @@
   }
 
   .left-side-bar {
-    width: 50px;
+    width: 0;
   }
 
   .left-side {
-    font-size: 60px;
-    top: 250px;
-    right: 210px;
-    letter-spacing: 12px;
+    display: none;
   }
 
   .right-side-bar {
@@ -291,7 +288,7 @@
   }
 
   .message-view {
-    width: calc(100% - 50px);
+    width: 100%;
   }
 
   .messages {

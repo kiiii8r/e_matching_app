@@ -213,6 +213,11 @@
     height: calc(700px - 170px);
   }
 
+  .messages {
+    border-left: 10px lightgray solid;
+    border-right: 0;
+  }
+
   .partner-image {
     margin: 10px 10px;
   }
@@ -291,6 +296,12 @@
 
   .messages {
     height: calc(600px - 170px);
+  }
+
+  .messages {
+    border-left: 0;
+    border-right: 10px lightblue solid;
+    background-color: whitesmoke;
   }
 
   .message-image {

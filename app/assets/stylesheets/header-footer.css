@@ -251,11 +251,14 @@ aside {
   .close {
     display: block;
     cursor: pointer;
-    margin-top: -12px;
+    margin-top: -23px;
   }
 
   .open {
     position: absolute;
+    padding: 10px 15px;
+    color: whitesmoke;
+    font-size: 18px;
   }
 
   .close {
@@ -280,7 +283,7 @@ aside {
   }
 
   input[type="checkbox"]:checked ~ aside {
-    top: 0px;
+    top: 11px;
     height: 200px; 
   }
 

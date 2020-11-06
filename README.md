@@ -203,7 +203,7 @@ https://e-matching-app.herokuapp.com/
 
 ## ER図
 
-![er](https://user-images.githubusercontent.com/68574158/98359160-1ae90380-206b-11eb-9686-4e8697f270ca.png "ER")
+![er](https://user-images.githubusercontent.com/68574158/98359653-e6c21280-206b-11eb-9b78-0a500209d626.png "ER")
 
 
 ## 開発環境

@@ -120,7 +120,7 @@ input[type="checkbox"] {
 }
 
 .list {
-  padding: 20px 20px;
+  padding: 20px;
   display: flex;
   scroll-snap-align: start;
   height: 400px;
@@ -300,7 +300,8 @@ input[type="checkbox"] {
   }
 
   .list {
-    height: 235px
+    height: 235px;
+    padding: 20px 10px;
   }
 
   .list-img {

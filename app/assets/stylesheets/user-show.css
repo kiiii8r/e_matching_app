@@ -246,6 +246,10 @@
     font-size: 12px;
   }
 
+  .detail-name {
+    margin-left:-10px;
+  }
+
   .detail-value {
     height: 4vw;
     width: 50vw;

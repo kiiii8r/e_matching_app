@@ -154,6 +154,7 @@ input[type="checkbox"] {
   font-weight: bold;
   border-bottom: 1px lightgray solid;
   padding: 0 5px;
+  margin-top: 10px;
 }
 
 .list-lower {
@@ -206,6 +207,14 @@ input[type="checkbox"] {
 
   .search-contents {
     width: 240px;
+  }
+
+  .user-list {
+    height: 740px;
+  }
+
+  .list {
+    height: 340px
   }
 
   .list-img {
@@ -276,23 +285,22 @@ input[type="checkbox"] {
     height: 600px;
   }
 
-  .user-list-title {
-
-  }
-
   .user-list {
     width: 85vw;
-    margin-bottom: 20px;
-    height:600px;
+    height: 530px;
   }
 
   .list {
-    height: 250px
+    height: 235px
   }
 
   .list-img {
     height: 110px;
     width: 110px;
+  }
+
+  .list-title {
+    margin-top: 5px;
   }
 
   .list-upper {

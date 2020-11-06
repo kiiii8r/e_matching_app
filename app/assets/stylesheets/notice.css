@@ -110,57 +110,57 @@
     padding: 10px 50px 10px 50px;
    }
 
-.visiter-img {
-  height: 80px;
-  width: 80px;
-}
+  .visiter-img {
+    height: 80px;
+    width: 80px;
+  }
 
-.notice-contents {
-  margin-top: -80px;
-  font-size: 15px;
-}
+  .notice-contents {
+    margin-top: -80px;
+    font-size: 15px;
+  }
 
-.moderate-font {
-  font-size: 10px;
-}
+  .moderate-font {
+    font-size: 10px;
+  }
 
-.notice-right {
-  margin-left: 30px;
-  width: 30vw;
- }
+  .notice-right {
+    margin-left: 30px;
+    width: 30vw;
+  }
 
- .notice-message {
-  display: inline-block;
-  max-width: 200px;
-  word-wrap: break-word;
-}
+  .notice-message {
+    display: inline-block;
+    max-width: 200px;
+    word-wrap: break-word;
+  }
 
-.notice-image {
-  max-height: 8vw;
-  max-width: 8vw;
-}
+  .notice-image {
+    max-height: 8vw;
+    max-width: 8vw;
+  }
 
-.notice-right {
-  width: 53vw;
- }
+  .notice-right {
+    width: 53vw;
+  }
 
- .relation-name {
-  font-size: 11px;
-}
+  .relation-name {
+    font-size: 11px;
+  }
 
- .notice-message {
-  max-width: 350px;
-  word-wrap: break-word;
-  font-size: 12px;
-}
+  .notice-message {
+    max-width: 350px;
+    word-wrap: break-word;
+    font-size: 12px;
+  }
 
-.new-message {
-  height: 55px;
-  margin-top: -25px;
-}
+  .new-message {
+    height: 55px;
+    margin-top: -25px;
+  }
 
-.notice-image {
-  max-height: 60px;
-  max-width: 100px;
-}
+  .notice-image {
+    max-height: 60px;
+    max-width: 100px;
+  }
 }

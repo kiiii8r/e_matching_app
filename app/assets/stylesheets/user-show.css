@@ -74,7 +74,17 @@
   font-size: 12px;
 }
 
-.user-show-btn {
+.new-chat-btn {
+  color: black;
+  background-color: white;
+  border: 2px rgba(0, 0, 0, 0.726) solid;
+  padding: 3px 5px;
+  margin-left: 1vw;
+  display: block;
+  font-size: 12px;
+} 
+
+.user-chat-btn {
   color: black;
   background-color: white;
   border: 2px rgba(0, 0, 0, 0.726) solid;
@@ -209,7 +219,11 @@
     display: block;
   }
 
-  .user-show-btn {
+  .new-chat-btn {
+    padding: 2px 20px;
+  }
+
+  .user-chat-btn {
     width: 60px;
   }
 

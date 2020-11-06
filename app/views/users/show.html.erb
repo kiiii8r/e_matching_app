@@ -70,22 +70,25 @@
 
           <div class="show-btn">
 
-            <div class="follow-count">
-              <div class="follow">follow:<%= @follow %></div>
-              <div class="follow">follower:<%= @follower %></div>
-            </div>
+            <div class="second-btn">
 
-            <div class="follow-btn">
+              <div class="follow-count">
+                <div class="follow">follow:<%= @follow %></div>
+                <div class="follow">follower:<%= @follower %></div>
+              </div>
 
-              <%= render "relationships/follow_button", user: @user %>
+              <div class="follow-btn">
 
+                <%= render "relationships/follow_button", user: @user %>
+
+              </div>
             </div>
 
             <div class="chat-btn">
 
             <%= form_with model: @room, url: rooms_path,  local: true do |f|%>
 
-              <%= f.submit "チャットルーム", class: 'user-show-btn'%>
+              <%= f.submit "メッセージ", class: 'new-chat-btn'%>
 
               <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
 
@@ -106,7 +109,7 @@
   
           <div class="show-btn">
 
-             <div class="second-btn">
+            <div class="second-btn">
 
               <div class="follow-count">
                 <div class="follow">follow:<%= @follow %></div>
@@ -122,7 +125,7 @@
 
             <div class="chat-btn">
 
-                <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-show-btn" %>
+                <%= link_to 'メッセージ', room_path(@room_number,partner_id: @user.id ), class: "user-chat-btn" %>
 
             </div>
           </div>

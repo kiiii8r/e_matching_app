@@ -292,65 +292,65 @@ aside {
 
   input[type="checkbox"]:checked ~ .open {
     display: none;
-}
+  }
 
-.open-v,
-.close-v {
-  display: block;
-  cursor: pointer;
-  margin-top: -12px;
-}
+  .open-v,
+  .close-v {
+    display: block;
+    cursor: pointer;
+    margin-top: -12px;
+  }
 
-.open-v {
-  position: absolute;
-  right: 0;
-  top: 14px;
-  padding: 10px 20px;
-  font-size: 18px;
-  transition: all 0.2s;
-}
+  .open-v {
+    position: absolute;
+    right: 0;
+    top: 14px;
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: all 0.2s;
+  }
 
-.close-v {
-  padding: 20px 0 10px 27px;
-  font-size: large;
-}
+  .close-v {
+    padding: 20px 0 10px 27px;
+    font-size: large;
+  }
 
-.v-menu-list {
-  display: list-item;
-  transition: all 0.4s;
-  position: absolute;
-  z-index: 2000;
-  top: -400px;
-  left: 0;
-  width: 100%;
-  background-color: lightgray;
-}
+  .v-menu-list {
+    display: list-item;
+    transition: all 0.4s;
+    position: absolute;
+    z-index: 2000;
+    top: -400px;
+    left: 0;
+    width: 100%;
+    background-color: lightgray;
+  }
 
-.v-menu-list li {
-  padding: 20px 30px 10px 30px;
-}
+  .v-menu-list li {
+    padding: 20px 30px 10px 30px;
+  }
 
-.header-link {
-  border-bottom: 1px gray solid;
-  padding: 40px 30px 20px 30px;
-}
+  .header-link {
+    border-bottom: 1px gray solid;
+    padding: 40px 30px 20px 30px;
+  }
 
-input[type="checkbox"]:checked ~ .v-menu-list {
-  top: 48px;
-}
+  input[type="checkbox"]:checked ~ .v-menu-list {
+    top: 48px;
+  }
 
-input[type="checkbox"]:checked ~ .open-v {
-  transform: scaleY(-1);
-}
+  input[type="checkbox"]:checked ~ .open-v {
+    transform: scaleY(-1);
+  }
 
-.blue-point {
-  margin-right: 40px;
-}
+  .blue-point {
+    margin-right: 40px;
+  }
 
-.main-text {
-  font-size: 23px;
-  font-weight: 600;
-  width: 100%;
-}
+  .main-text {
+    font-size: 23px;
+    font-weight: 600;
+    width: 100%;
+  }
 
 }

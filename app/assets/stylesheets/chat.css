@@ -213,6 +213,11 @@
     height: calc(700px - 170px);
   }
 
+  .messages {
+    border-left: 10px lightgray solid;
+    border-right: 0;
+  }
+
   .partner-image {
     margin: 10px 10px;
   }
@@ -293,6 +298,12 @@
     height: calc(600px - 170px);
   }
 
+  .messages {
+    border-left: 0;
+    border-right: 10px lightblue solid;
+    background-color: whitesmoke;
+  }
+
   .message-image {
     height: 20vw;
     width: 30vw;
@@ -340,23 +351,23 @@
     width: 40px;
   }
 
-.chat-footer {
-  height: 120px;
-  text-align: center;
-  background-color: lightblue;
-}
+  .chat-footer {
+    height: 120px;
+    text-align: center;
+    background-color: lightblue;
+  }
 
-.form-input {
-  padding: 20px;
-}
+  .form-input {
+    padding: 20px;
+  }
 
-.form-message {
-  width: 31vw;
-  margin: 3px;
-}
+  .form-message {
+    width: 31vw;
+    margin: 3px;
+  }
 
-.form-image{
-  margin-top: 10px;
-  margin-left: 10px;
-}
+  .form-image{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }

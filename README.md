@@ -5,10 +5,14 @@
 ### フリーランス仲間や同業者とのコミュニケーションを生み出す
 ### エンジニアのためのマッチングサイトです。
  
+
+
 ## 本番環境URL
  
 https://e-matching-app.herokuapp.com/
  
+
+
 ## テスト用アカウント
  
 - Basic認証
@@ -25,6 +29,7 @@ https://e-matching-app.herokuapp.com/
     - pass: aaa123
 
  
+
 ## 機能紹介
 
 
@@ -44,6 +49,8 @@ https://e-matching-app.herokuapp.com/
 - メッセージ機能
   - 各ユーザー対ユーザー毎のメッセージ環境を作成
 
+
+
 ## その他工夫点
 
 - 非同期処理
@@ -51,6 +58,7 @@ https://e-matching-app.herokuapp.com/
   - チャット画面のメッセージ内容の最後尾まで自動スクロール
   - 新規会員登録時の誕生日入力後年齢自動取得
  
+
 
 ## 目指した課題解決
  
@@ -60,6 +68,7 @@ https://e-matching-app.herokuapp.com/
 
 エンジニアの仲間同士の企業、フリーランスや副業が増加傾向の今、チームで効率良く何かを始めたくても、多忙な日々の中で最適なパートナーを探すのは難しい。そういった人々が効率よく相性の良いパートナーと巡り会うことができることを意識し作成しました。
  
+
  
 ## 今後の課題
 
@@ -83,6 +92,8 @@ https://e-matching-app.herokuapp.com/
 
 - 有料会員機能(API:Payjp)
   - 有料会員専用複数人数チャットルーム作成
+
+
 
 ## データベース設計
 
@@ -201,9 +212,12 @@ https://e-matching-app.herokuapp.com/
 - belongs_to like
 - belongs_to message
 
+
+
 ## ER図
 
 ![er](https://user-images.githubusercontent.com/68574158/98359653-e6c21280-206b-11eb-9b78-0a500209d626.png "ER")
+
 
 
 ## 開発環境

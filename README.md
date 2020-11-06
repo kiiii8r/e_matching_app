@@ -86,10 +86,6 @@ https://e-matching-app.herokuapp.com/
 
 - 新規の方でもわかりやすいレイアウトへの調整
 
-- 本番環境のAWS化
-
-- CircleCIによるマイグレーション・デプロイの自動化
-
 - 有料会員機能(API:Payjp)
   - 有料会員専用複数人数チャットルーム作成
 
@@ -234,8 +230,6 @@ https://e-matching-app.herokuapp.com/
 - Railsバージョン
 	- Rails 6.0.3.4
 
-- herokuバージョン
-	- heroku/7.46.0 darwin-x64 node-v12.16.2
-
-- AWS
-  - S3
+- 本番環境
+  - AWS: S3 EC2
+  - Capistrano

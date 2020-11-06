@@ -214,7 +214,7 @@ input[type="checkbox"] {
   }
 
   .list {
-    height: 340px
+    height: 340px;
   }
 
   .list-img {
@@ -254,10 +254,19 @@ input[type="checkbox"] {
   .search-contents {
     margin: 0;
     padding: 0;
+    height: 100vh;
+  }
+
+  .search-name {
+    padding:0;
+  }
+
+  .follow-title {
+    padding: 0;
   }
 
   .follow-contents {
-    height: 180px;
+    height: 120px;
     margin: 12px;
   }
 
@@ -366,6 +375,7 @@ input[type="checkbox"] {
     z-index: 3001;
     top: 0;
     left: -500px;
+
   }
 
   input[type="checkbox"]:checked ~ .side-menu {
@@ -378,7 +388,7 @@ input[type="checkbox"] {
     transform: scaleX(-1);
     z-index: 3001;
     top: 0px;
-    height: 750px;
+    height: 100vh;
     position: fixed;
   }
 

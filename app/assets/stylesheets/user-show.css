@@ -243,16 +243,16 @@
   }
 
   .detail-list {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .detail-name {
-    margin-left:-10px;
+    margin-left:0px;
   }
 
   .detail-value {
     height: 4vw;
-    width: 50vw;
+    width: 45vw;
   }
 
   .user-box {

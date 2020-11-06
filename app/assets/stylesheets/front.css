@@ -70,6 +70,11 @@
 }
 
 @media screen and (max-width: 812px) { 
+
+  .front-show:before {
+    content: "↓ touch! ↓";
+  }
+
   .front-show {
     height: 520px;
     text-align: center;
@@ -91,7 +96,7 @@
 
   .match-front {
     height: 400px;
-    margin-top: 73px;
+    margin-top: px;
     font-size: large;
   }
 

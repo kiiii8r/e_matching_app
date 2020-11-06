@@ -238,4 +238,4 @@ https://e-matching-app.herokuapp.com/
 	- heroku/7.46.0 darwin-x64 node-v12.16.2
 
 - AWS
-  - EC2
+  - S3

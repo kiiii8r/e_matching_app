@@ -249,6 +249,8 @@ input[type="checkbox"] {
 
   .search-contents {
     width: 240px;
+    overflow: auto;
+    scroll-snap-type: mandatory;
   }
 
   .search-contents {

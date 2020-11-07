@@ -184,7 +184,6 @@ aside {
 .footer {
   z-index: 999;
   background-color: white;
-  height:500px;
 }
 
 .footer-contents {
@@ -197,6 +196,7 @@ aside {
   font-weight: 900;
   width: 70%;
   color: gray;
+  padding-left: 80px; 
 }
 
 .text-black {
@@ -231,6 +231,7 @@ aside {
   .main-text {
     font-size: 30px;
     font-weight: 800;
+    padding-left: 30px; 
   }
 
 }
@@ -347,7 +348,8 @@ aside {
   .main-text {
     font-size: 23px;
     font-weight: 600;
-    width: 100%;
+    padding: 0 30px;
+    width: calc(100% - 60px);
   }
 
 }

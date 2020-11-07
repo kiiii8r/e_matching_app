@@ -32,7 +32,7 @@ body {
      "... ...... ...... ...... ...... ...... ..." auto
      "... left   center center center right  ..." auto
      "... ...... ...... ...... ...... ...... ..." auto
-     "... ...... footer footer footer ...... ..." 300px
+     "... footer footer footer footer footer ..." 300px
      "... ...... ...... ...... ...... ...... ..." auto
      / auto 80px auto minmax(300px,1fr) auto 80px auto; 
 }
@@ -71,7 +71,7 @@ body {
      "... ...... ...... ...... ...... ...... ..." auto
      "... left   center center center right  ..." auto
      "... ...... ...... ...... ...... ...... ..." auto
-     "... ...... footer footer footer ...... ..." 300px
+     "... footer footer footer footer footer ..." 300px
      "... ...... ...... ...... ...... ...... ..." auto
      / auto 30px auto minmax(300px,1fr) auto 30px auto; 
 }

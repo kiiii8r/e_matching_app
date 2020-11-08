@@ -23,6 +23,8 @@ class User < ApplicationRecord
     self.followings.include?(other_user)
   end
 
+  def self.from_omniauth(auth)
+  end
 
   validates :nickname, presence: true, length: { maximum: 8 } 
 

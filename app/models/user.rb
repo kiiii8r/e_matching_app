@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :rooms, through: :room_users
   has_many :notifications
+  has_many :sns_credentials
 
   has_many :relationships
   has_many :followings, through: :relationships, source: :follow

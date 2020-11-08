@@ -3,8 +3,8 @@ class User < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :role
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise  :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   has_one :profile
   has_many :room_users

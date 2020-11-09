@@ -120,6 +120,7 @@
 - has_many rooms, through: :room_users
 - has_many likes
 - has_many notifications
+- has_many sns_credentials
 
 
 ### Profiles テーブル
@@ -211,7 +212,17 @@
 - belongs_to like
 - belongs_to message
 
+### SnsCredentialテーブル
 
+| Column     | Type          | Options                              |
+| ---------- | ------------- | ------------------------------------ |
+| provider   | string        |                                      |
+| uid        | string        |                                      |
+| user       | references    | optional: true, foreign_key: true    |
+
+#### Association
+
+- belongs_to :user, optional: true
 
 ## ER図
 

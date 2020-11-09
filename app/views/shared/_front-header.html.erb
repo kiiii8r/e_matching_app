@@ -6,7 +6,9 @@
           <li><a class="top-logo" href="#">🌙</a></li>
           <div class="top-list">
             <input id="menu" type="checkbox" />
-            <label for="menu" class="open">◉️</label>
+            <label for="menu" class="open">
+              <i class="fas fa-bars"></i>
+            </label>
             <label for="menu" class="back"></label>
             <aside>
               <label for="menu" class="close">✖</label>
@@ -32,7 +34,9 @@
           <ul class='lists-lower'>
 
             <input class="menu-v" id="menu-v" type="checkbox" />
-            <label for="menu-v" class="open-v">v</label>
+            <label for="menu-v" class="open-v">
+              <i class="fas fa-angle-down"></i>
+            </label>
             <label for="menu-v" class="back-v"></label>
 
               <div class="v-menu-list">
@@ -43,6 +47,14 @@
                 <li><%= link_to 'sign up',  new_user_registration_path, class: "header-link" %></li> 
 
               </div>
+
+            <%= link_to  user_facebook_omniauth_authorize_path, method: :post do %>
+              <i class="fab fa-facebook-f"></i>
+            <% end %>
+
+            <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do %>
+              <i class="fab fa-google"></i>
+            <% end %>
 
             <li class="blue-point"><%= link_to 'Log in', user_session_path, class: "point-font" %></li>
 

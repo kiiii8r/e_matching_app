@@ -60,6 +60,14 @@ aside {
   z-index: 1500;
 }
 
+.fa-google {
+  color: gray;
+}
+
+.fa-facebook-f {
+  color: gray;
+}
+
 .nav-lower {
   background-color: white;
   height: 50px;

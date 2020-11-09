@@ -3,14 +3,15 @@ class User < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :role
 
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  devise  :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
   has_one :profile
   has_many :room_users
   has_many :messages
   has_many :rooms, through: :room_users
   has_many :notifications
+  has_many :sns_credentials
 
   has_many :relationships
   has_many :followings, through: :relationships, source: :follow
@@ -22,6 +23,18 @@ class User < ApplicationRecord
     self.followings.include?(other_user)
   end
 
+  def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
+    user = User.where(email: auth.info.email).first_or_initialize(
+      nickname: auth.info.name,
+        email: auth.info.email
+    )
+    if user.persisted?
+      sns.user = user
+      sns.save
+    end
+    { user: user, sns: sns }
+  end
 
   validates :nickname, presence: true, length: { maximum: 8 } 
 

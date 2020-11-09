@@ -49,6 +49,10 @@
 - メッセージ機能
   - 各ユーザー対ユーザー毎のメッセージ環境を作成
 
+- SNS認証機能
+  - facebookアカウントによるログイン機能(facebook 外部API)
+  - Googleアカウントによるログイン機能(Google 外部API)
+
 
 
 ## その他工夫点
@@ -120,6 +124,7 @@
 - has_many rooms, through: :room_users
 - has_many likes
 - has_many notifications
+- has_many sns_credentials
 
 
 ### Profiles テーブル
@@ -211,11 +216,21 @@
 - belongs_to like
 - belongs_to message
 
+### SnsCredentialテーブル
 
+| Column     | Type          | Options                              |
+| ---------- | ------------- | ------------------------------------ |
+| provider   | string        |                                      |
+| uid        | string        |                                      |
+| user       | references    | optional: true, foreign_key: true    |
+
+#### Association
+
+- belongs_to :user, optional: true
 
 ## ER図
 
-![er](https://user-images.githubusercontent.com/68574158/98359653-e6c21280-206b-11eb-9b78-0a500209d626.png "ER")
+![er](https://user-images.githubusercontent.com/68574158/98520730-d3a28300-22b5-11eb-8333-d1c70a3f7168.png "ER")
 
 
 

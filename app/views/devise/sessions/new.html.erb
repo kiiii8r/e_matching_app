@@ -12,6 +12,14 @@
           </h1>
         </div>
 
+        <%= link_to  user_facebook_omniauth_authorize_path, method: :post do %>
+          <i class="fab fa-facebook-f"></i>
+        <% end %>
+
+        <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do %>
+         <i class="fab fa-google"></i>
+        <% end %>
+
         <div class='login-flash-message'>
           <%= flash[:notice] %>
           <%= flash[:alert] %>

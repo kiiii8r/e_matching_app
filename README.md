@@ -230,7 +230,7 @@
 
 ## ER図
 
-![er](https://user-images.githubusercontent.com/68574158/98359653-e6c21280-206b-11eb-9b78-0a500209d626.png "ER")
+![er](https://user-images.githubusercontent.com/68574158/98520730-d3a28300-22b5-11eb-8333-d1c70a3f7168.png "ER")
 
 
 

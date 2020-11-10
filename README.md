@@ -9,7 +9,7 @@
 
 ## 本番環境URL
  
- http://18.178.217.166
+http://e-match.tk/
  
 
 
@@ -263,3 +263,7 @@
   - AWS EC2/S3
   - Git GitHub
   - Capistrano
+
+- ドメイン管理
+  - AWS Route53
+  - Freenum

@@ -51,7 +51,6 @@ https://e-match.tk/
 
 - SNS認証機能
   - facebookアカウントによるログイン機能(facebook 外部API)
-  ※ 現在本番環境にてエラー発生、対応中です
   - Googleアカウントによるログイン機能(Google 外部API)
 
 

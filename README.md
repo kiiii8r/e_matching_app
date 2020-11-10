@@ -9,7 +9,7 @@
 
 ## 本番環境URL
  
-http://e-match.tk/
+https://e-match.tk/
  
 
 
@@ -49,8 +49,9 @@ http://e-match.tk/
 - メッセージ機能
   - 各ユーザー対ユーザー毎のメッセージ環境を作成
 
-- SNS認証機能  ※ 現在本番環境にてエラー発生、対応中です ※
+- SNS認証機能
   - facebookアカウントによるログイン機能(facebook 外部API)
+  ※ 現在本番環境にてエラー発生、対応中です
   - Googleアカウントによるログイン機能(Google 外部API)
 
 

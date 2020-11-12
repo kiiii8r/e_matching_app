@@ -49,9 +49,10 @@ https://e-match.tk/
 - メッセージ機能
   - 各ユーザー対ユーザー毎のメッセージ環境を作成
 
-- SNS認証機能
+- SNS認証機能 ※現在調整中です
   - facebookアカウントによるログイン機能(facebook 外部API)
   - Googleアカウントによるログイン機能(Google 外部API)
+  - twitterアカウントによるログイン機能(twitter 外部API)
 
 
 

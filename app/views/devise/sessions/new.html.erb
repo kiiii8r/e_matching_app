@@ -20,6 +20,10 @@
          <i class="fab fa-google"></i>
         <% end %>
 
+        <%= link_to user_twitter_omniauth_authorize_path, method: :post do %>
+          <i class="fab fa-twitter"></i>
+        <% end %>
+
         <div class='login-flash-message'>
           <%= flash[:notice] %>
           <%= flash[:alert] %>

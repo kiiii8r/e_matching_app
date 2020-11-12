@@ -18,16 +18,15 @@ class User < ApplicationRecord
   has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
   has_many :followers, through: :reverse_of_relationships, source: :user
 
-
   def following?(other_user)
-    self.followings.include?(other_user)
+    followings.include?(other_user)
   end
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
     user = User.where(email: auth.info.email).first_or_initialize(
       nickname: auth.info.name,
-        email: auth.info.email
+      email: auth.info.email
     )
     if user.persisted?
       sns.user = user
@@ -36,7 +35,7 @@ class User < ApplicationRecord
     { user: user, sns: sns }
   end
 
-  validates :nickname, presence: true, length: { maximum: 8 } 
+  validates :nickname, presence: true, length: { maximum: 8 }
 
   with_options presence: true do
     validates :birth_day

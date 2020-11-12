@@ -3,6 +3,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:index, :search, :show]
 
   def index
+    if Profile.find(current_user.id).blank?
+      redirect_to new_user_profile_path(current_user.id)
+    end
     @users = User.all.order('Profile created_at DESC')
     set_user_column
     @relationships = Relationship.where(user_id: current_user.id)

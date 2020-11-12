@@ -44,7 +44,8 @@
  
         </div>
 
-        <%if @sns_id.present? %>
+        <% re_sns_auth %>
+        <% if @sns_id.present? || @sns_auth == 'true' %>
 
           <%= hidden_field_tag :sns_auth, true %>
 

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if Profile.find(current_user.id).blank?
       redirect_to new_user_profile_path(current_user.id)
     end
-    @users = User.all.order('Profile created_at DESC')
+    @users = User.find(Profile.pluck('user_id') || User.all.pluck('id')) 
     set_user_column
     @relationships = Relationship.where(user_id: current_user.id)
     @search = User.search(params[:q])

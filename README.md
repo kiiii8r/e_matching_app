@@ -54,6 +54,7 @@ https://e-match.tk/
   - Googleアカウントによるログイン機能(Google 外部API)
   - twitterアカウントによるログイン機能(twitter 外部API)
 
+- レスポンシブWebデザイン
 
 
 ## その他工夫点

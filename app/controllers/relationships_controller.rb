@@ -1,5 +1,4 @@
 class RelationshipsController < ApplicationController
-
   def create
     @relationship = Relationship.new(user_set)
     if @relationship.save!
@@ -24,6 +23,7 @@ class RelationshipsController < ApplicationController
   end
 
   private
+
   def user_set
     params.permit(:follow_id).merge(user_id: current_user.id)
   end

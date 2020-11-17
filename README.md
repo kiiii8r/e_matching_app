@@ -16,8 +16,8 @@ https://e-match.tk/
 ## テスト用アカウント
  
 - Basic認証
-  - PASS: mita
-  - ID: 2018 
+  - user: mita
+  - pass: 2018 
 
 - Login
   - テストユーザー１

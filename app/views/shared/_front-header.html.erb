@@ -46,6 +46,8 @@
 
                 <li><%= link_to 'sign up',  new_user_registration_path, class: "header-link" %></li> 
 
+                <li><%= link_to 'Log in', user_session_path, class: "header-link" %></li> 
+
               </div>
 
             <%= link_to  user_facebook_omniauth_authorize_path, method: :post do %>
@@ -60,7 +62,7 @@
               <i class="fab fa-twitter"></i>
             <% end %>
 
-            <li class="blue-point"><%= link_to 'Log in', user_session_path, class: "point-font" %></li>
+            <li class="blue-point"><%= link_to ' Introduction', 'https://kii-portfolio.herokuapp.com/', class: "point-font" %></li>
 
           </ul>
         </div>

@@ -1,11 +1,10 @@
 ![title](https://user-images.githubusercontent.com/68574158/98359174-1f152100-206b-11eb-836c-46871050f54d.png "title")
  
-# eMatch Pro
+# eMatch Pro （※現在サーバートラブルのため調整中）
 
 ### フリーランス仲間や同業者とのコミュニケーションを生み出す
 ### エンジニアのためのマッチングサイトです。
  
-# （※現在トラブルのため調整中）
 
 
 ## 本番環境URL

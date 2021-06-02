@@ -1,4 +1,4 @@
-app_path = File.expand_path('../../../', __FILE__)
+app_path = File.expand_path('/var/www/e_matching_app')
 
 worker_processes 1
 
